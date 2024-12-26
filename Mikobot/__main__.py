@@ -331,34 +331,35 @@ async def more_ai_handler_callback(update: Update, context: ContextTypes.DEFAULT
     if query.data == "more_ai_handler":
         await query.answer()
         await query.message.edit_text(
-            "*Here's more image gen related commands*:\n\n"
-            "Command: /meinamix\n"
-            "  • Description: Generates an image using the meinamix model.\n\n"
-            "Command: /darksushi\n"
-            "  • Description: Generates an image using the darksushi model.\n\n"
-            "Command: /meinahentai\n"
-            "  • Description: Generates an image using the meinahentai model.\n\n"
-            "Command: /darksushimix\n"
-            "  • Description: Generates an image using the darksushimix model.\n\n"
-            "Command: /anylora\n"
-            "  • Description: Generates an image using the anylora model.\n\n"
-            "Command: /cetsumix\n"
-            "  • Description: Generates an image using the cetsumix model.\n\n"
-            "Command: /anything\n"
-            "  • Description: Generates an image using the anything model.\n\n"
-            "Command: /absolute\n"
-            "  • Description: Generates an image using the absolute model.\n\n"
-            "Command: /darkv2\n"
-            "  • Description: Generates an image using the darkv2 model.\n\n"
-            "Command: /creative\n"
-            "  • Description: Generates an image using the creative model.",
+            "<blockquote>Hᴇʀᴇ's ᴍᴏʀᴇ ɪᴍᴀɢᴇ ɢᴇɴ ʀᴇʟᴀᴛᴇᴅ ᴄᴏᴍᴍᴀɴᴅs:</blockquote>\n\n"
+            "<blockquote>➱ Cᴏᴍᴍᴀɴᴅ: /meinamix\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴍᴇɪɴᴀᴍɪx ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /darksushi\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴅᴀʀᴋsᴜsʜɪ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /meinahentai\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴍᴇɪɴᴀʜᴇɴᴛᴀɪ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /darksushimix\n"
+            "⤥ Cᴏᴍᴍᴀɴᴅ ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴅᴀʀᴋsᴜsʜɪᴍɪx ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /anylora\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴀɴʏʟᴏʀᴀ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /cetsumix\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴄᴇᴛsᴜᴍɪx ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /anything\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴀɴʏᴛʜɪɴɢ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /absolute\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴀʙsᴏʟᴜᴛᴇ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /darkv2\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴅᴀʀᴋᴠ2 ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /creative\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴄʀᴇᴀᴛɪᴠᴇ ᴍᴏᴅᴇʟ.</blockquote>",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("⇦ BACK", callback_data="ai_handler"),
-                    ],
-                ],
+                        InlineKeyboardButton("Bᴀᴄᴋ 🔙", callback_data="ai_handler"),
+                    ]
+                ]
             ),
+            parse_mode="html",
         )
 
 
@@ -367,36 +368,35 @@ async def more_aihandlered_callback(update: Update, context: ContextTypes.DEFAUL
     if query.data == "more_aihandlered":
         await query.answer()
         await query.message.edit_text(
-            "*Here's more image gen related commands*:\n\n"
-            "*Command*: /meinamix\n"
-            "  • Description: Generates an image using the meinamix model.\n\n"
-            "*Command*: /darksushi\n"
-            "  • Description: Generates an image using the darksushi model.\n\n"
-            "*Command*: /meinahentai\n"
-            "  • Description: Generates an image using the meinahentai model.\n\n"
-            "*Command*: /darksushimix\n"
-            "  • Description: Generates an image using the darksushimix model.\n\n"
-            "*Command*: /anylora\n"
-            "  • Description: Generates an image using the anylora model.\n\n"
-            "*Command*: /cetsumix\n"
-            "  • Description: Generates an image using the cetsumix model.\n\n"
-            "*Command*: /anything\n"
-            "  • Description: Generates an image using the anything model.\n\n"
-            "*Command*: /absolute\n"
-            "  • Description: Generates an image using the absolute model.\n\n"
-            "*Command*: /darkv2\n"
-            "  • Description: Generates an image using the darkv2 model.\n\n"
-            "*Command*: /creative\n"
-            "  • Description: Generates an image using the creative model.",
+            "<blockquote>Hᴇʀᴇ's ᴍᴏʀᴇ ɪᴍᴀɢᴇ ɢᴇɴ ʀᴇʟᴀᴛᴇᴅ ᴄᴏᴍᴍᴀɴᴅs:</blockquote>\n\n"
+            "<blockquote>➱ Cᴏᴍᴍᴀɴᴅ: /meinamix\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴍᴇɪɴᴀᴍɪx ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /darksushi\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴅᴀʀᴋsᴜsʜɪ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /meinahentai\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴍᴇɪɴᴀʜᴇɴᴛᴀɪ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /darksushimix\n"
+            "⤥ Cᴏᴍᴍᴀɴᴅ ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴅᴀʀᴋsᴜsʜɪᴍɪx ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /anylora\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴀɴʏʟᴏʀᴀ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /cetsumix\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴄᴇᴛsᴜᴍɪx ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /anything\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴀɴʏᴛʜɪɴɢ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /absolute\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴀʙsᴏʟᴜᴛᴇ ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /darkv2\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴅᴀʀᴋᴠ2 ᴍᴏᴅᴇʟ.\n\n"
+            "➱ Cᴏᴍᴍᴀɴᴅ: /creative\n"
+            "⤥ Dᴇsᴄʀɪᴘᴛɪᴏɴ: Gᴇɴᴇʀᴀᴛᴇs ᴀɴ ɪᴍᴀɢᴇ ᴜsɪɴɢ ᴛʜᴇ ᴄʀᴇᴀᴛɪᴠᴇ ᴍᴏᴅᴇʟ.</blockquote>",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            "⇦ BACK", callback_data="ai_command_handler"
-                        ),
-                    ],
-                ],
+                        InlineKeyboardButton("Bᴀᴄᴋ 🔙", callback_data="ai_command_handler"),
+                    ]
+                ]
             ),
+            parse_mode="html",
         )
 
 
