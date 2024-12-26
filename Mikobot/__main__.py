@@ -594,18 +594,18 @@ async def stats_back(update: Update, context: ContextTypes.DEFAULT_TYPE):
         mem = psutil.virtual_memory().percent
         disk = psutil.disk_usage("/").percent
         text = f"""
-𝙎𝙮𝙨𝙩𝙚𝙢 𝙨𝙩𝙖𝙩𝙨@𝙔𝙖𝙚𝙈𝙞𝙠𝙤_𝙍𝙤𝙭𝙗𝙤𝙩
+Sʏsᴛᴇᴍ sᴛᴀᴛs ⤵
 ➖➖➖➖➖➖
-UPTIME ➼ {uptime}
-CPU ➼ {cpu}%
-RAM ➼ {mem}%
-DISK ➼ {disk}%
+Uᴘᴛɪᴍᴇ ➱ {uptime}
+CPU ➱ {cpu}%
+RAM ➱ {mem}%
+DISK ➱ {disk}%
 
-PYTHON ➼ {PYTHON_VERSION}
+PYTHON ➱ {PYTHON_VERSION}
 
-PTB ➼ {PTB_VERSION}
-TELETHON ➼ {TELETHON_VERSION}
-PYROGRAM ➼ {PYROGRAM_VERSION}
+PTB ➱ {PTB_VERSION}
+TELETHON ➱ {TELETHON_VERSION}
+PYROGRAM ➱ {PYROGRAM_VERSION}
 """
         await query.answer(text=text, show_alert=True)
 
@@ -615,31 +615,29 @@ async def gitsource_callback(update: Update, context: ContextTypes.DEFAULT_TYPE)
     await query.answer()
 
     if query.data == "git_source":
-        source_link = "https://github.com/Infamous-Hydra/YaeMiko"
         message_text = (
-            f"*Here is the link for the public source repo*:\n\n{source_link}"
+            "<blockquote>Aᴄᴛᴜᴀʟʟʏ ᴍʏ ᴛᴇᴀᴍ ᴘʀᴏᴠɪᴅᴇ ᴘᴀɪᴅ sᴏᴜʀᴄᴇ</blockquote>\n<blockquote>Dᴍ ғᴏʀ sᴏᴜʀᴄᴇ:- @UTTAM470</blockquote>"
         )
 
         # Adding the inline button
-        keyboard = [[InlineKeyboardButton(text="◁", callback_data="Miko_back")]]
+        keyboard = [[InlineKeyboardButton(text="Bᴀᴄᴋ 🔙", callback_data="Miko_back")]]
         reply_markup = InlineKeyboardMarkup(keyboard)
 
         await query.edit_message_text(
             message_text,
-            parse_mode=ParseMode.MARKDOWN,
+            parse_mode="html",
             disable_web_page_preview=False,
             reply_markup=reply_markup,
         )
 
 
 async def repo(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    source_link = "https://github.com/Infamous-Hydra/YaeMiko"
-    message_text = f"*Here is the link for the public source repo*:\n\n{source_link}"
+    message_text = "<blockquote>Aᴄᴛᴜᴀʟʟʏ ᴍʏ ᴛᴇᴀᴍ ᴘʀᴏᴠɪᴅᴇ ᴘᴀɪᴅ sᴏᴜʀᴄᴇ</blockquote>\n<blockquote>Dᴍ ғᴏʀ sᴏᴜʀᴄᴇ:- @UTTAM470</blockquote>"
 
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
         text=message_text,
-        parse_mode=ParseMode.MARKDOWN,
+        parse_mode="html",
         disable_web_page_preview=False,
     )
 
