@@ -437,7 +437,7 @@ async def anime_command_callback(update: Update, context: ContextTypes.DEFAULT_T
                     ],
                 ]
             ),
-            parse_mode="Markdown",  # Added this line to explicitly specify Markdown parsing
+            parse_mode="html",  # Added this line to explicitly specify Markdown parsing
         )
 
 
