@@ -19,8 +19,8 @@ class Config(object):
 
     # <================================================ REQUIRED ======================================================>
     # Telegram API configuration
-    API_ID = 204 # Get this value from my.telegram.org/apps
-    API_HASH = ""
+    API_ID = 16457832 # Get this value from my.telegram.org/apps
+    API_HASH = "3030874d0befdb5d05597deacc3e83ab"
 
     # Database configuration (PostgreSQL)
     DATABASE_URL = "postgres:"
@@ -30,20 +30,20 @@ class Config(object):
     MESSAGE_DUMP = -100
 
     # MongoDB configuration
-    MONGO_DB_URI = ""
+    MONGO_DB_URI = "mongodb+srv://Yash_607:Yash_607@cluster0.r3s9sbo.mongodb.net/?retryWrites=true&w=majority"
 
     # Support chat and support ID
-    SUPPORT_CHAT = ""
+    SUPPORT_CHAT = "BABY09_WORLD"
     SUPPORT_ID = -100
 
     # Database name
-    DB_NAME = ""
+    DB_NAME = "uttam_team"
 
     # Bot token
-    TOKEN = ""  # Get bot token from @BotFather on Telegram
+    TOKEN = "8081146945:AAHG2bc5ehGFyjv3eGqYALOn-UfN1SNwCmg"  # Get bot token from @BotFather on Telegram
 
     # Owner's Telegram user ID (Must be an integer)
-    OWNER_ID = 5907205317
+    OWNER_ID = 7400383704
     # <=======================================================================================================>
 
     # <================================================ OPTIONAL ======================================================>
