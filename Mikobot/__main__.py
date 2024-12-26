@@ -539,12 +539,12 @@ async def help_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "➲ *HELP SECTION OF* *{}* :\n".format(HELPABLE[module].__mod_name__)
+                "➥ Hᴇʟᴘ sᴇᴄᴛɪᴏɴ ᴏғ {} :\n".format(HELPABLE[module].__mod_name__)
                 + HELPABLE[module].__help__
             )
             await query.message.edit_text(
                 text=text,
-                parse_mode=ParseMode.MARKDOWN,
+                parse_mode="html",
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
