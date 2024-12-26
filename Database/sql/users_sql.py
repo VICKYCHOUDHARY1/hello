@@ -40,15 +40,21 @@ from Mikobot import dispatcher
 
 class Users(BASE):
     __tablename__ = "users"
-    user_id = Column(BigInteger, primary_key=True)
-    username = Column(UnicodeText)
+    
+    # Define columns
+    user_id = Column(BigInteger, primary_key=True, nullable=False)  # BIGINT for large Telegram IDs
+    username = Column(UnicodeText, nullable=True)  # UnicodeText for multi-language usernames
 
     def __init__(self, user_id, username=None):
+        # Validate user_id to ensure it's an integer
+        if not isinstance(user_id, int):
+            raise ValueError("user_id must be an integer")
         self.user_id = user_id
         self.username = username
 
     def __repr__(self):
-        return "<ᴜsᴇʀ {} ({})>".format(self.username, self.user_id)
+        # Return a readable string representation of the user
+        return f"<User {self.username} ({self.user_id})>"
 
 
 class Chats(BASE):
@@ -102,9 +108,14 @@ INSERTION_LOCK = threading.RLock()
 
 def ensure_bot_in_db():
     with INSERTION_LOCK:
-        bot = Users(dispatcher.bot.id, dispatcher.bot.username)
-        SESSION.merge(bot)
-        SESSION.commit()
+        try:
+            bot = Users(dispatcher.bot.id, dispatcher.bot.username)
+            SESSION.merge(bot)
+            SESSION.commit()
+        except Exception as e:
+            print(f"Error inserting bot in database: {e}")
+            SESSION.rollback()
+
 
 
 def update_user(user_id, username, chat_id=None, chat_name=None):
