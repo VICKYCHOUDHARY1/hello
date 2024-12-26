@@ -213,15 +213,15 @@ async def extra_command_handlered(update: Update, context: ContextTypes.DEFAULT_
 
     keyboard = [
         [
-            InlineKeyboardButton("MANAGEMENT", callback_data="help_back"),
-            InlineKeyboardButton("AI", callback_data="ai_command_handler"),
+            InlineKeyboardButton("˹ ᴍᴀɴᴀɢᴍᴇɴᴛ ˼", callback_data="help_back"),
+            InlineKeyboardButton("˹ ᴀɪ ˼", callback_data="ai_command_handler"),
         ],
         [
-            InlineKeyboardButton("ANIME", callback_data="anime_command_handler"),
-            InlineKeyboardButton("GENSHIN", callback_data="genshin_command_handler"),
+            InlineKeyboardButton("˹ ᴀɴɪᴍᴇ ˼", callback_data="anime_command_handler"),
+            InlineKeyboardButton("˹ ɢᴇɴsʜɪɴ ˼", callback_data="genshin_command_handler"),
         ],
         [
-            InlineKeyboardButton("HOME", callback_data="Miko_back"),
+            InlineKeyboardButton("Bᴀᴄᴋ 🔙", callback_data="Miko_back"),
         ],
     ]
 
@@ -243,19 +243,19 @@ async def extra_command_callback(update: Update, context: ContextTypes.DEFAULT_T
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("MANAGEMENT", callback_data="help_back"),
-                        InlineKeyboardButton("AI", callback_data="ai_command_handler"),
+                        InlineKeyboardButton("˹ ᴍᴀɴᴀɢᴍᴇɴᴛ ˼", callback_data="help_back"),
+                        InlineKeyboardButton("˹ ᴀɪ ˼", callback_data="ai_command_handler"),
                     ],
                     [
                         InlineKeyboardButton(
-                            "ANIME", callback_data="anime_command_handler"
+                            "˹ ᴀɴɪᴍᴇ ˼", callback_data="anime_command_handler"
                         ),
                         InlineKeyboardButton(
-                            "GENSHIN", callback_data="genshin_command_handler"
+                            "˹ ɢᴇɴsʜɪɴ ˼", callback_data="genshin_command_handler"
                         ),
                     ],
                     [
-                        InlineKeyboardButton("HOME", callback_data="Miko_back"),
+                        InlineKeyboardButton("Bᴀᴄᴋ 🔙", callback_data="Miko_back"),
                     ],
                 ]
             ),
@@ -266,16 +266,16 @@ async def extra_command_callback(update: Update, context: ContextTypes.DEFAULT_T
 async def ai_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
-            InlineKeyboardButton("AI", callback_data="ai_handler"),
-            InlineKeyboardButton("IMAGEGEN", callback_data="more_aihandlered"),
+            InlineKeyboardButton("˹ ᴀɪ ˼", callback_data="ai_handler"),
+            InlineKeyboardButton("˹ ɪᴍᴀɢᴇɢᴇɴ ˼", callback_data="more_aihandlered"),
         ],
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-        "🧠 *Here are the options for* [𝗬𝗔𝗘 𝗠𝗜𝗞𝗢](https://telegra.ph/file/ed2d9c3693cacc9b0464e.jpg):",
+        "<blockquote>Cʜᴏᴏsᴇ ᴏᴘᴛɪᴏɴ ғᴏʀ ᴀɪ <a href='https://files.catbox.moe/xmwm5k.jpg'>ᴡᴏʀᴋɪɴɢ</a></blockquote>:",
         reply_markup=reply_markup,
-        parse_mode="Markdown",
+        parse_mode="html",
     )
 
 
@@ -284,23 +284,23 @@ async def ai_command_callback(update: Update, context: ContextTypes.DEFAULT_TYPE
     if query.data == "ai_command_handler":
         await query.answer()
         await query.message.edit_text(
-            "🧠 *Here are the options for* [𝗬𝗔𝗘 𝗠𝗜𝗞𝗢](https://telegra.ph/file/ed2d9c3693cacc9b0464e.jpg):",
+            "<blockquote>Cʜᴏᴏsᴇ ᴏᴘᴛɪᴏɴ ғᴏʀ ᴀɪ <a href='https://files.catbox.moe/xmwm5k.jpg'>ᴡᴏʀᴋɪɴɢ</a></blockquote>:",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("AI", callback_data="ai_handler"),
+                        InlineKeyboardButton("˹ ᴀɪ ˼", callback_data="ai_handler"),
                         InlineKeyboardButton(
-                            "IMAGEGEN", callback_data="more_aihandlered"
+                            "˹ ɪᴍᴀɢᴇɢᴇɴ ˼", callback_data="more_aihandlered"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            "» 𝘽𝘼𝘾𝙆 «", callback_data="extra_command_handler"
+                            "Bᴀᴄᴋ 🔙", callback_data="extra_command_handler"
                         ),
                     ],
                 ]
             ),
-            parse_mode="Markdown",
+            parse_mode="html",
         )
 
 
