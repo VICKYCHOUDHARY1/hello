@@ -23,7 +23,7 @@ class Config(object):
     API_HASH = "3030874d0befdb5d05597deacc3e83ab"
 
     # Database configuration (PostgreSQL)
-    DATABASE_URL = "postgres://"
+    DATABASE_URL = "postgres://kfcdtwea:jxgqtvc1ji7lSMjAhUp0QbxrE8Ut0t7N@fanny.db.elephantsql.com/kfcdtwea"
 
     # Event logs chat ID and message dump chat ID
     EVENT_LOGS = -100
