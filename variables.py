@@ -40,7 +40,7 @@ class Config(object):
     DB_NAME = "uttam_team"
 
     # Bot token
-    TOKEN = "8081146945:AAHG2bc5ehGFyjv3eGqYALOn-UfN1SNwCmg"  # Get bot token from @BotFather on Telegram
+    TOKEN = "7750394101:AAHGzu2QHZj3vQrdsYCgWYFMGzxYNMDgZ78"  # Get bot token from @BotFather on Telegram
 
     # Owner's Telegram user ID (Must be an integer)
     OWNER_ID = 7400383704
