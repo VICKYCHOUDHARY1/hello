@@ -4,7 +4,7 @@ from httpx import AsyncClient, Timeout
 from Python_ARQ import ARQ
 
 # Constants
-ARQ_API_KEY = "RLWCED-WZASYO-AWOLTB-ITBWTP-ARQ"  # GET API KEY FROM @ARQRobot
+ARQ_API_KEY = "ERTMOF-BGEQGE-RGHHYB-LLZWYD-ARQ"  # GET API KEY FROM @ARQRobot
 ARQ_API_URL = "https://arq.hamker.dev"
 
 # Placeholder for global variables
