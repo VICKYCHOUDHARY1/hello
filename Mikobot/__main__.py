@@ -712,7 +712,7 @@ async def Miko_about_callback(update: Update, context: ContextTypes.DEFAULT_TYPE
         await query.message.edit_text(
             PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
             reply_markup=InlineKeyboardMarkup(START_BTN),
-            parse_mode=ParseMode.MARKDOWN,
+            parse_mode=ParseMode.html,
             disable_web_page_preview=True,
         )
 
