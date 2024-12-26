@@ -38,21 +38,20 @@ PM_START_TEXT = "<blockquote>➥ I ᴀᴍ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴍᴇɴᴛ
 START_BTN = [
     [
         InlineKeyboardButton(
-            text="⇦ ADD ME ⇨",
+            text="˹ ᴧᴅᴅ ɱҽ ʙᴧʙʏ ˼",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="HELP", callback_data="extra_command_handler"),
+        InlineKeyboardButton(text="˹ ʜᴇʟᴘ ˼", callback_data="extra_command_handler"),
+        InlineKeyboardButton(text="˹ ᴅᴇᴛᴀɪʟs ˼", callback_data="Miko_"),
     ],
     [
-        InlineKeyboardButton(text="DETAILS", callback_data="Miko_"),
-        InlineKeyboardButton(text="SOURCE", callback_data="git_source"),
-    ],
-    [
-        InlineKeyboardButton(text="CREATOR", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="˹ sᴏᴜʀᴄᴇ ˼", callback_data="git_source"),
+        InlineKeyboardButton(text="˹ Oᴡɳᴇʀ ˼", url=f"tg://user?id={OWNER_ID}"),
     ],
 ]
+
 
 GROUP_START_BTN = [
     [
