@@ -647,53 +647,53 @@ async def Miko_about_callback(update: Update, context: ContextTypes.DEFAULT_TYPE
     if query.data == "Miko_":
         uptime = get_readable_time((time.time() - StartTime))
         message_text = (
-            f"➲ <b>Ai integration.</b>"
-            f"\n➲ <b>Advance management capability.</b>"
-            f"\n➲ <b>Anime bot functionality.</b>"
-            f"\n\n<b>Click on the buttons below for getting help and info about</b> {BOT_NAME}."
+            f"<blockquote>➥ <b>Aɪ ɪɴᴛᴇɢʀᴀᴛɪᴏɴ.</b>"
+            f"\n➥ <b>Aᴅᴠᴀɴᴄᴇ ᴍᴀɴᴀɢᴍᴇɴᴛ ᴄᴀᴘᴀʙɪʟɪᴛʏ.</b>"
+            f"\n➥ <b>ᴀɴɪᴍᴇ ʙᴏᴛ ғᴜɴᴄᴛɪᴏɴᴀʟɪᴛʏ.</b></blockquote>"
+            f"\n\n<blockquote><b>Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴘ ᴀɴᴅ ɪɴғᴏ ᴀʙᴏᴜᴛ</b> {BOT_NAME}.</blockquote>"
         )
         await query.message.edit_text(
             text=message_text,
             disable_web_page_preview=True,
-            parse_mode=ParseMode.HTML,
+            parse_mode="html",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ABOUT", callback_data="Miko_support"
+                            text="˹ ᴀʙᴏᴜᴛ ˼", callback_data="Miko_support"
                         ),
-                        InlineKeyboardButton(text="COMMAND", callback_data="help_back"),
+                        InlineKeyboardButton(text="˹ ʜᴇʟᴘᴇʀ ˼", callback_data="help_back"),
                     ],
                     [
-                        InlineKeyboardButton(text="INSIDER", callback_data="insider_"),
+                        InlineKeyboardButton(text="˹ sᴛᴀᴛs ˼", callback_data="insider_"),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="Miko_back"),
+                        InlineKeyboardButton(text="Bᴀᴄᴋ 🔙", callback_data="Miko_back"),
                     ],
                 ]
             ),
         )
     elif query.data == "Miko_support":
         message_text = (
-            "*Our bot leverages SQL, MongoDB, Telegram, MTProto for secure and efficient operations. It resides on a high-speed server, integrates numerous APIs, ensuring quick and versatile responses to user queries.*"
-            f"\n\n*If you find any bug in {BOT_NAME} Please report it at the support chat.*"
+            "<blockquote><b>Oᴜʀ ʙᴏᴛ ʟᴇᴠᴇʀᴀɢᴇs SQL, MongoDB, Telegram, MTProto ғᴏʀ sᴇᴄᴜʀᴇ ᴀɴᴅ ᴇғғɪᴄɪᴇɴᴛ ᴏᴘᴇʀᴀᴛɪᴏɴs. Iᴛ ʀᴇsɪᴅᴇs ᴏɴ ᴀ ʜɪɢʜ-sᴘᴇᴇᴅ sᴇʀᴠᴇʀ, ɪɴᴛᴇɢʀᴀᴛᴇs ɴᴜᴍᴇʀᴏᴜs APIs, ᴇɴsᴜʀɪɴɢ ǫᴜɪᴄᴋ ᴀɴᴅ ᴠᴇʀsᴀᴛɪʟᴇ ʀᴇsᴘᴏɴsᴇ ᴛᴏ ᴜsᴇʀ ǫᴜᴇʀɪᴇs.</b></blockquote>"
+            f"\n\n<blockquote><b>Iғ ʏᴏᴜ ғɪɴᴅ ᴀɴʏ ʙᴜɢ ɪɴ {BOT_NAME} Pʟᴇᴀsᴇ ʀᴇᴘᴏʀᴛ ɪᴛ ᴀᴛ ᴛʜᴇ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.</b></blockquote>"
         )
         await query.message.edit_text(
             text=message_text,
-            parse_mode=ParseMode.MARKDOWN,
+            parse_mode="html",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="SUPPORT", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="˹ sᴜᴘᴘᴏʀᴛ ˼", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="DEVELOPER", url=f"tg://user?id={OWNER_ID}"
+                            text="˹ ᴅᴇᴠᴇʟᴏᴘᴇʀ ˼", url=f"tg://user?id={OWNER_ID}"
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="Miko_"),
+                        InlineKeyboardButton(text="Bᴀᴄᴋ 🔙", callback_data="Miko_"),
                     ],
                 ]
             ),
