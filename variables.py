@@ -23,7 +23,7 @@ class Config(object):
     API_HASH = "3030874d0befdb5d05597deacc3e83ab"
 
     # Database configuration (PostgreSQL)
-    DATABASE_URL = "postgresql://SANJU_X_AJ:TIGER9834@localhost:5432/uttam_team"
+    DATABASE_URL = "postgresql://SANJU_X_AJ:TIGER9834@localhost:22/uttam_team"
 
     # Event logs chat ID and message dump chat ID
     EVENT_LOGS = -100
