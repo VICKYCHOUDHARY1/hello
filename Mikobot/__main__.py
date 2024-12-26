@@ -405,30 +405,29 @@ async def anime_command_callback(update: Update, context: ContextTypes.DEFAULT_T
     if query.data == "anime_command_handler":
         await query.answer()
         await query.message.edit_text(
-            "⛩[𝗔𝗻𝗶𝗺𝗲 𝗨𝗽𝗱𝗮𝘁𝗲𝘀](https://telegra.ph//file/59d93fede8bf12fec1a51.jpg) :\n\n"
-            "**╔ /anime: **fetches info on single anime (includes buttons to look up for prequels and sequels)\n"
-            "**╠ /character: **fetches info on multiple possible characters related to query\n"
-            "**╠ /manga: **fetches info on multiple possible mangas related to query\n"
-            "**╠ /airing: **fetches info on airing data for anime\n"
-            "**╠ /studio: **fetches info on multiple possible studios related to query\n"
-            "**╠ /schedule: **fetches scheduled animes\n"
-            "**╠ /browse: **get popular, trending or upcoming animes\n"
-            "**╠ /top: **to retrieve top animes for a genre or tag\n"
-            "**╠ /watch: **fetches watch order for anime series\n"
-            "**╠ /fillers: **to get a list of anime fillers\n"
-            "**╠ /gettags: **get a list of available tags\n"
-            "**╠ /animequotes: **get random anime quotes\n"
-            "**╚ /getgenres: **Get list of available Genres\n\n"
-            "**⚙️ Group Settings:**\n"
-            "**╔**\n"
-            "**╠ /anisettings: **to toggle NSFW lock and airing notifications and other settings in groups (anime news)\n"
-            "**╚**",
+            "<blockquote>Aɴɪᴍᴇ ᴄᴏᴍᴍᴀɴᴅ ᴜsᴇ / :</blockquote>\n\n"
+            "<blockquote>/anime: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ sɪɴɢʟᴇ ᴀɴɪᴍᴇ (ɪɴᴄʟᴜᴅᴇs ʙᴜᴛᴛᴏɴs ᴛᴏ ʟᴏᴏᴋ ᴜᴘ ғᴏʀ ᴘʀᴇǫᴜᴇʟs ᴀɴᴅ sᴇǫᴜᴇʟs)\n"
+            "/character: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ ᴍᴜʟᴛɪᴘʟᴇ ᴘᴏssɪʙʟᴇ ᴄʜᴀʀᴀᴄᴛᴇʀs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ǫᴜᴇʀʏ\n"
+            "/manga: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ ᴍᴜʟᴛɪᴘʟᴇ ᴘᴏssɪʙʟᴇ ᴍᴀɴɢᴀs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ǫᴜᴇʀʏ\n"
+            "/airing: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ ᴀɪʀɪɴɢ ᴅᴀᴛᴀ ғᴏʀ ᴀɴɪᴍᴇ\n"
+            "/studio: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ ᴍᴜʟᴛɪᴘʟᴇ ᴘᴏssɪʙʟᴇ sᴛᴜᴅɪᴏs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ǫᴜᴇʀʏ\n"
+            "/schedule: ғᴇᴛᴄʜᴇs sᴄʜᴇᴅᴜʟᴇᴅ ᴀɴɪᴍᴇs\n"
+            "/browse: ɢᴇᴛ ᴘᴏᴘᴜʟᴀʀ, ᴛʀᴇɴᴅɪɴɢ ᴏʀ ᴜᴘᴄᴏᴍɪɴɢ ᴀɴɪᴍᴇs\n"
+            "/top: ᴛᴏ ʀᴇᴛʀɪᴇᴠᴇ ᴛᴏᴘ ᴀɴɪᴍᴇs ғᴏʀ ᴀ ɢᴇɴʀᴇ ᴏʀ ᴛᴀɢ\n"
+            "/watch: ғᴇᴛᴄʜᴇs ᴡᴀᴛᴄʜ ᴏʀᴅᴇʀ ғᴏʀ ᴀɴɪᴍᴇ sᴇʀɪᴇs\n"
+            "/fillers: ᴛᴏ ɢᴇᴛ ᴀ ʟɪsᴛ ᴏғғ ᴀɴɪᴍᴇ ғɪʟᴛᴇʀs\n"
+            "/gettags: ɢᴇᴛ ᴀ ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ᴛᴀɢs\n"
+            "/animequotes: ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀɴɪᴍᴇ ǫᴜᴏᴛᴇs\n"
+            "/getgenres: Gᴇᴛ ʟɪsᴛ ᴏғғ ᴀᴠᴀɪʟᴀʙʟᴇ ɢᴇɴʀᴇs</blockquote>\n\n"
+            "<blockquote>⚙️ Gʀᴏᴜᴘ Sᴇᴛᴛɪɴɢs:</blockquote>\n"
+            "<blockquote>/anisettings: ᴛᴏ ᴛᴏɢɢʟᴇ NSFW ʟᴏᴄᴋ ᴀɴᴅ ᴀɪʀɪɴɢ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀɴᴅ ᴏᴛʜᴇʀ sᴇᴛᴛɪɴɢs ɪɴ ɢʀᴏᴜᴘs (ᴀɴɪᴍᴇ ɴᴇᴡs)</blockquote>\n"
+            "😊",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("More Info", url="https://anilist.co/"),
+                        InlineKeyboardButton("Gᴏ ᴀɴᴅ ɢᴇɴ ᴍᴏʀᴇ", url="https://anilist.co/"),
                         InlineKeyboardButton(
-                            "㊋Infamous•Hydra", url="https://t.me/Infamous_Hydra"
+                            "˹ ʙᴀʙʏ-ᴍᴜsɪᴄ ™˼𓅂", url="https://t.me/BABY09_WORLD"
                         ),
                     ],
                     [
