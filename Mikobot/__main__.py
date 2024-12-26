@@ -309,26 +309,20 @@ async def ai_handler_callback(update: Update, context: ContextTypes.DEFAULT_TYPE
     if query.data == "ai_handler":
         await query.answer()
         await query.message.edit_text(
-            "[𝗔𝗿𝘁𝗶𝗳𝗶𝗰𝗶𝗮𝗹 𝗜𝗻𝘁𝗲𝗹𝗹𝗶𝗴𝗲𝗻𝘁 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀](https://telegra.ph/file/01a2e0cd1b9d03808c546.jpg):\n\n"
-            "All Commands:\n"
-            "➽ /askgpt <write query>: A chatbot using GPT for responding to user queries.\n\n"
-            "➽ /palm <write prompt>: Performs a Palm search using a chatbot.\n\n"
-            "➽ /upscale <reply to image>: Upscales your image quality.",
+            "<blockquote>Aʟʟ Cᴏᴍᴍᴀɴᴅ ᴜsᴇ /:</blockquote>"
+            "<blockquote>➥ /askgpt &lt;wʀɪᴛᴇ ǫᴜᴇʀʏ&gt;: ᴀ ᴄʜᴀᴛɢᴘᴛ ʀᴇsᴘᴏɴᴅɪɴɢ ᴛᴏ ᴜsᴇʀ ǫᴜᴇʀɪᴇs.\n\n\n\n"
+            "➥ /palm &lt;wʀɪᴛᴇ ᴘʀᴏᴍᴛ&gt;: Pᴇʀғᴏʀᴍs ᴀ ᴘᴀʟᴍ sᴇᴀʀᴄʜ ᴜsɪɴɢ ᴀ ᴄʜᴀᴛɢᴘᴛ.\n\n"
+            "➥ /upscale &lt;ʀᴇᴘʟʏ ᴛᴏ ɪᴍᴀɢᴇ&gt;: Uᴘsᴄᴀʟᴇs ʏᴏᴜʀ ɪᴍᴀɢᴇ ǫᴜɪʟɪᴛʏ.</blockquote>",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            "More Image Gen ➪", callback_data="more_ai_handler"
+                            "Bᴀᴄᴋ 🔙", callback_data="ai_command_handler"
                         ),
                     ],
-                    [
-                        InlineKeyboardButton(
-                            "⇦ BACK", callback_data="ai_command_handler"
-                        ),
-                    ],
-                ],
+                ]
             ),
-            parse_mode="Markdown",
+            parse_mode="html",
         )
 
 
