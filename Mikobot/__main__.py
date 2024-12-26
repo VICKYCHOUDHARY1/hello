@@ -432,7 +432,7 @@ async def anime_command_callback(update: Update, context: ContextTypes.DEFAULT_T
                     ],
                     [
                         InlineKeyboardButton(
-                            "» 𝘽𝘼𝘾𝙆 «", callback_data="extra_command_handler"
+                            "Bᴀᴄᴋ 🔙", callback_data="extra_command_handler"
                         ),
                     ],
                 ]
@@ -446,23 +446,23 @@ async def genshin_command_callback(update: Update, context: ContextTypes.DEFAULT
     if query.data == "genshin_command_handler":
         await query.answer()
         await query.message.edit_text(
-            "⛩ [𝗚𝗲𝗻𝘀𝗵𝗶𝗻 𝗜𝗺𝗽𝗮𝗰𝘁](https://telegra.ph/file/cd03348a4a357624e70db.jpg) ⛩\n\n"
-            "*UNDER DEVELOPMENT*",
+            "<blockquote><b><u>Gᴇɴsʜɪɴ ɪᴍᴘᴀᴄᴛ</u></b>\n\n"
+            "˹ ʙᴀʙʏ-ᴍᴜsɪᴄ ™˼𓅂 <a href='https://files.catbox.moe/01z7uc.jpg'>ᴜɴᴅᴇʀ</a></blockquote>",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            "More Info", url="https://genshin.mihoyo.com/"
+                            "Gᴏ ᴀɴᴅ ɢᴇɴsʜɪɴ", url="https://genshin.mihoyo.com/"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            "» 𝘽𝘼𝘾𝙆 «", callback_data="extra_command_handler"
+                            "Bᴀᴄᴋ 🔙", callback_data="extra_command_handler"
                         ),
                     ],
                 ]
             ),
-            parse_mode="Markdown",  # Added this line to explicitly specify Markdown parsing
+            parse_mode="html",  # Added this line to explicitly specify Markdown parsing
         )
 
 
