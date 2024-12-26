@@ -110,13 +110,13 @@ async def set_mataa(_, ctx: Message, strings):
 
 # <=================================================== HELP ====================================================>
 __help__ = """
-🙅‍♂️ **Toji Mata**.
+<blockquote><b><u>Tᴏᴊɪ Mᴀᴛᴀ.</u></b>
 
-» /imposter : Detects if some one change his/her name.
+➯ /imposter : Dᴇᴛᴇᴄᴛs ɪғ sᴏᴍᴇ ᴏɴᴇ ᴄʜᴀɴɢᴇ ʜɪs/ʜᴇʀ ɴᴀᴍᴇ.
 
-» /imposter on : turns on toji mata.
+➯ /imposter on : ᴛᴜʀɴs ᴏɴ ᴛᴏᴊɪ ᴍᴀᴛᴀ.
 
-» /imposter off : turns off toji mata.
+➯ /imposter off : ᴛᴜʀɴs ᴏғғ ᴛᴏᴊɪ ᴍᴀᴛᴀ.</blockquote>
 """
 
 __mod_name__ = "˹ ɪᴍᴘᴏsᴛᴇʀ ˼"
