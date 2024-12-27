@@ -46,7 +46,7 @@ async def alive(_, message: Message):
     await message.reply_animation(
         random.choice(ALIVE_ANIMATION),
         caption=caption,
-        parse_mode=ParseMode.HTML,
+        parse_mode="HTML",
         reply_markup=InlineKeyboardMarkup(ALIVE_BTN),
     )
 
