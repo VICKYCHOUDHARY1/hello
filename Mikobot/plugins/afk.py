@@ -180,17 +180,17 @@ async def check_afk(
 
 
 __help__ = """
-» /afk <reason>*:* mark yourself as AFK (away from keyboard).
+<blockquote>➯ /afk &lt;reason&gt;: ᴍᴀʀᴋ ʏᴏᴜʀsᴇʟғ ᴀs AFK (ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ).
 
-» brb , !afk <reason>*:* same as the afk command - but not a command.
+➯ brb , !afk &lt;reason&gt;: sᴀᴍᴇ ᴀs ᴛʜᴇ ᴀғᴋ ᴄᴏᴍᴍᴀɴᴅ - ʙᴜᴛ ɴᴏᴛ ᴀ ᴄᴏᴍᴍᴀɴᴅ.
 
-» /bye [Reason > Optional] - Tell others that you are AFK (Away From Keyboard).
+➯ /bye [Reason &gt; Optional] - Tᴇʟʟ ᴏᴛʜᴇʀs ᴛʜᴀᴛ ʏᴏᴜ ᴀʀᴇ AFK (ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ).
 
-» /bye [reply to media] - AFK with media.
+➯ /bye [reply to media] - AFK ᴡɪᴛʜ ᴍᴇᴅɪᴀ.
 
-» /byedel - Enable auto delete AFK message in group (Only for group admin). Default is **Enable**.
+➯ /byedel - Eɴᴀʙʟᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ AFK ᴍᴇssᴀɢᴇ ɪɴ ɢʀᴏᴜᴘ (Oɴʟʏ ғᴏʀ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴ). Dᴇғᴀᴜʟᴛ ɪs (Eɴᴀʙʟᴇ).
 
-➠ *When marked as AFK, any mentions will be replied to with a message to say you're not available!*
+↻ Wʜᴇɴ ᴍᴀʀᴋᴇᴅ ᴀs AFK, ᴀɴʏ ᴍᴇɴᴛɪᴏɴs ᴡɪʟʟ ʙᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴡɪᴛʜ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ sᴀʏ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ!</blockquote>
 """
 
 # <================================================ HANDLER =======================================================>
@@ -210,7 +210,7 @@ function(AFK_REGEX_HANDLER, AFK_GROUP)
 function(NO_AFK_HANDLER, AFK_GROUP)
 function(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
 
-__mod_name__ = "AFK"
+__mod_name__ = "˹ ᴀғᴋ ˼"
 __command_list__ = ["afk"]
 __handlers__ = [
     (AFK_HANDLER, AFK_GROUP),
