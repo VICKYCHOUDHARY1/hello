@@ -4,7 +4,7 @@
 
 # <============================================== IMPORTS =========================================================>
 import random
-import html
+from telegram.constants import ParseMode
 from sys import version_info
 
 import pyrogram
