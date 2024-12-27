@@ -211,22 +211,21 @@ async def unapproveall_btn(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 __help__ = """
-➠ Sometimes, you might trust a user not to send unwanted content.
-Maybe not enough to make them admin, but you might be ok with locks, blacklists, and antiflood not applying to them.
+<blockquote>❖ Sᴏᴍᴇᴛɪᴍᴇs, ʏᴏᴜ ᴍɪɢʜᴛ ᴛʀᴜsᴛ ᴀ ᴜsᴇʀ ɴᴏᴛ ᴛᴏ sᴇɴᴅ ᴜɴᴡᴀɴᴛᴇᴅ ᴄᴏɴᴛᴇɴᴛ.
+Mᴀʏʙᴇ ɴᴏᴛ ᴇɴᴏᴜᴛʜ ᴛᴏ ᴍᴀᴋᴇ ᴛʜᴇᴍ ᴀᴅᴍɪɴ, ʙᴜᴛ ʏᴏᴜ ᴍɪɢʜᴛ ʙᴇ ᴏᴋ ᴡɪᴛʜ ʟᴏᴄᴋs, ʙʟᴀᴄᴋʟɪsᴛs, ᴀɴᴅ ᴀɴᴛɪғʟᴏᴏᴅ ɴᴏᴛ ᴀᴘᴘʟʏɪɴɢ ᴛᴏ ᴛʜᴇᴍ.
 
-➠ That's what approvals are for - approve of trustworthy users to allow them to send
+❖ Tʜᴀᴛ's ᴡʜᴀᴛ ᴀᴘᴘʀᴏᴠᴀʟs ᴀʀᴇ ғᴏʀ - ᴀᴘᴘʀᴏᴠᴇ ᴏғ ᴛʀᴜsᴛwoʀᴛʜʏ ᴜsᴇʀs ᴛᴏ ᴀʟʟᴏᴡ ᴛʜᴇᴍ ᴛᴏ sᴇɴᴅ</blockquote>
 
-➠ *Admin commands:*
+<b><u>➠ Aᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅ :</u></b>
+<blockquote>➯ /approval: Cʜᴇᴄᴋ ᴀ ᴜsᴇʀ's ᴀᴘᴘʀᴏᴠᴀʟ sᴛᴀᴛᴜs ɪɴ ᴛʜɪs ᴄʜᴀᴛ.
 
-» /approval: Check a user's approval status in this chat.
+➯ /approve: Aᴘᴘʀᴏᴠᴇ ᴏғ ᴀ ᴜsᴇʀ. Lᴏᴄᴋs, ʙʟᴀᴄᴋʟɪsᴛs, ᴀɴᴅ ᴀɴᴛɪғʟᴏᴏᴅ ᴡᴏɴ'ᴛ ᴀᴘᴘʟʏ ᴛᴏ ᴛʜᴇᴍ ᴀɴʏᴍᴏʀᴇ.
 
-» /approve: Approve of a user. Locks, blacklists, and antiflood won't apply to them anymore.
+➯ /unapprove: Uɴᴀᴘᴘʀᴏᴠᴇ ᴏғ ᴀ ᴜsᴇʀ. Tʜᴇʏ ᴡɪʟʟ ɴᴏᴛ ʙᴇ sᴜʙᴊᴇᴄᴛs ᴛᴏ ʟᴏᴄᴋs, ʙʟᴀᴄᴋʟɪsᴛs, ᴀɴᴅ ᴀɴᴛɪғʟᴏᴏᴅ ᴀɢᴀɪɴ.
 
-» /unapprove: Unapprove of a user. They will now be subject to locks, blacklists, and antiflood again.
+➯ /approved: Lɪsᴛ ᴀʟʟ ᴀᴘᴘʀᴏᴠᴇᴅ ᴜsᴇʀs.
 
-» /approved: List all approved users.
-
-» /unapproveall: Unapprove *ALL* users in a chat. This cannot be undone.
+➯ /unapproveall: Uɴᴀᴘᴘʀᴏᴠᴇ Aʟʟ ᴜsᴇʀs ɪɴ ᴀ ᴄʜᴀᴛ. Tʜɪs ᴄᴀɴɴᴏᴛ ʙᴇ ᴜɴᴅᴏɴᴇ.</blockquote>
 """
 
 APPROVE = DisableAbleCommandHandler("approve", approve, block=False)
@@ -245,6 +244,6 @@ dispatcher.add_handler(APPROVAL)
 dispatcher.add_handler(UNAPPROVEALL)
 dispatcher.add_handler(UNAPPROVEALL_BTN)
 
-__mod_name__ = "APPROVALS"
+__mod_name__ = "˹ ᴀᴘᴘʀᴏᴠᴀʟs ˼"
 __command_list__ = ["approve", "unapprove", "approved", "approval"]
 __handlers__ = [APPROVE, DISAPPROVE, APPROVED, APPROVAL]
