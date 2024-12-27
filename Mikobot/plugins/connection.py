@@ -415,22 +415,17 @@ async def connect_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # <=================================================== HELP ====================================================>
-__mod_name__ = "CONNECT"
+__mod_name__ = "˹ ᴄᴏɴɴᴇᴄᴛ ˼"
 
 __help__ = """
-➠ *Sometimes, you just want to add some notes and filters to a group chat, but you don't want everyone to see; this is where connections come in. This allows you to connect to a chat's database and add things to it without the commands appearing in chat! For obvious reasons, you need to be an admin to add things, but any member in the group can view your data.*
+<blockquote>❖ Sᴏᴍᴇᴛɪᴍᴇs, ʏᴏᴜ ᴊᴜsᴛ ᴡᴀɴᴛ ᴛᴏ ᴀᴅᴅ sᴏᴍᴇ ɴᴏᴛᴇs ᴀɴᴅ ғɪʟᴛᴇʀs ᴛᴏ ᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ, ʙᴜᴛ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴇᴠᴇʀʏᴏɴᴇ ᴛᴏ sᴇᴇ; ᴛʜɪs ɪs ᴡʜᴇʀᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs ᴄᴏᴍᴇ ɪɴ. Tʜɪs ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ᴀ ᴄʜᴀᴛ's ᴅᴀᴛᴀʙᴀsᴇ ᴀɴᴅ ᴀᴅᴅ ᴛʜɪɴɢs ᴛᴏ ɪᴛ ᴡɪᴛʜᴏᴜᴛ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴀᴘᴘᴇᴀʀɪɴɢ ɪɴ ᴄʜᴀᴛ! Fᴏʀ ᴏʙᴠɪᴏᴜs ʀᴇᴀsᴏɴs, ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴅᴅ ᴛʜɪɴɢs, ʙᴜᴛ ᴀɴʏ ᴍᴇᴍʙᴇʀ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴄᴀɴ ᴠɪᴇᴡ ʏᴏᴜʀ ᴅᴀᴛᴀ.❖</blockquote>
+<blockquote>➯ /connect: Cᴏɴɴᴇᴄᴛs ᴛᴏ ᴄʜᴀᴛ (ᴄᴀɴ ʙᴇ ᴅᴏɴᴇ ɪɴ ᴀ ɢʀᴏᴜᴘ ʙʏ /connect or /connect &lt;chat id&gt; ɪɴ PM)
+➯ /connection: Lɪsᴛ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴄʜᴀᴛs
+➯ /disconnect: Dɪsᴄᴏɴɴᴇᴄᴛ ғʀᴏᴍ ᴀ ᴄʜᴀᴛ
+➯ /helpconnect: Lɪsᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ʀᴇᴍᴏᴛᴇʟʏ</blockquote>
 
-» /connect: Connects to chat (can be done in a group by /connect or /connect <chat id> in PM)
-
-» /connection: List connected chats
-
-» /disconnect: Disconnect from a chat
-
-» /helpconnect: List available commands that can be used remotely
-
-➠ *Admin Only:*
-
-» /allowconnect <yes/no>: Allow a user to connect to a chat
+<b><u>➠ Adᴅᴍɪɴ Oɴʟʏ:</u></b>
+<blockquote>➯ /allowconnect &lt;yes/no&gt;: Aʟʟᴏᴡ ᴀ ᴜsᴇʀ ᴛᴏ ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ᴀ ᴄʜᴀᴛ</blockquote>
 """
 
 # <================================================ HANDLER =======================================================>
