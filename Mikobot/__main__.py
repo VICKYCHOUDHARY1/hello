@@ -733,7 +733,8 @@ async def get_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
             return
         await update.effective_message.reply_text(
-            "» *Choose an option for getting* [𝗵𝗲𝗹𝗽](https://telegra.ph/file/cce9038f6a9b88eb409b5.jpg)",
+            "» *Help commands can only be accessed in PM.*\n"
+            "Please click the button below to open the help menu in private chat.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -743,16 +744,10 @@ async def get_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                 context.bot.username
                             ),
                         )
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="OPEN HERE",
-                            callback_data="extra_command_handler",
-                        )
-                    ],
+                    ]
                 ]
             ),
-            parse_mode="Markdown",  # Added this line to explicitly specify Markdown parsing
+            parse_mode="Markdown",
         )
         return
 
@@ -774,6 +769,7 @@ async def get_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     else:
         await send_help(chat.id, HELP_STRINGS)
+
 
 
 async def send_settings(chat_id, user_id, user=False):
