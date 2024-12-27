@@ -81,28 +81,19 @@ function(CommandHandler("botadmins", botstaff, block=False))
 
 # <=================================================== HELP ====================================================>
 __help__ = """
-➠ *BOT ADMINS ONLY:*
+<b><u>➠ Bᴏᴛ Aᴅᴍɪɴs Oɴʟʏ:</u></b>
+<blockquote>➯ /stats: Sʜᴏᴡs ʙᴏᴛ sᴛᴀᴛs.
+➯ /ping: ᴘɪɴɢ ᴘᴏɴɢ.
+➯ /gban: Gʟᴏʙᴀʟ ʙᴀɴ.
+➯ /gbanlist: Sʜᴏᴡs ɢʙᴀɴ ʟɪsᴛ.
+➯ /botadmins: Oᴘᴇɴs Bᴏᴛ ᴀᴅᴍɪɴ ʟɪsᴛs.
+➯ /gcast: Aᴅᴠᴀɴᴄᴇ ʙʀᴏᴀᴅᴄᴀsᴛ sʏsᴛᴇᴍ. Jᴜsᴛ ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴍᴇssᴀɢᴇ.</blockquote>
 
-» /stats: Shows bot stats.
-
-» /ping: see ping.
-
-» /gban: Global ban.
-
-» /gbanlist: Shows gban list.
-
-» /botadmins: Opens Bot admin lists.
-
-» /gcast: Advance broadcast system. Just reply to any message.
-
-➠ *Write with text message*
-
-» /broadcastall
-
-» /broadcastusers
-
-» /broadcastgroups
+<b><u>➠ Wʀɪᴛᴇ ᴡɪᴛʜ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ</u></b>
+<blockquote>➯ /broadcastall
+➯ /broadcastusers
+➯ /broadcastgroups</blockquote>
 """
 
-__mod_name__ = "BOT-ADMIN"
+__mod_name__ = "˹ ʙᴏᴛ-ᴀᴅᴍɪɴ ˼"
 # <================================================ HANDLER =======================================================>
