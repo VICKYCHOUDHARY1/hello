@@ -1063,27 +1063,27 @@ async def admin_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 __help__ = """
-» /adminlist: List of admins in the chat.
+<blockquote>➥ /adminlist: Lɪsᴛ ᴏғғ ᴀᴅᴍɪɴs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.</blockquote>
 
-➠ *Admins only:*
+➠ Aᴅᴍɪɴ ᴏɴʟʏ:
 
-» /pin: Silently pins the message replied to. Add 'loud' or 'notify' to give notifications to users.
+<blockquote>➯ /pin: Sɪʟᴇɴᴛʟʏ ᴘɪɴs ᴛʜᴇ ᴍᴇssᴀɢᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ. Aᴅᴅ 'loud' ᴏʀ 'notify' ᴛᴏ ɢɪᴠᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴs ᴛᴏ ᴜsᴇʀs.
 
-» /unpin: Unpins the currently pinned message.
+➯ /unpin: Uᴜɴᴘɪɴs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ.
 
-» /unpinall: Unpins all the pinned messages. Works in topics too (only OWNER can do this).
+➯ /unpinall: Uɴᴘɪɴs ᴀʟʟ ᴛʜᴇ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇs. ᴡᴏʀᴋs ɪɴ ᴛᴏᴘɪᴄs ᴛᴏ (ᴏɴʟʏ Oᴡɴᴇʀ ᴄᴀɴ ᴅᴏ ᴛʜɪs).
 
-» /invitelink: Get an invite link.
+➯ /invitelink: Gᴇᴛ ᴀɴ ɪɴᴠɪᴛᴇ ʟɪɴᴋ.
 
-» /promote: Promotes the user replied to.
+➯ /promote: Pʀᴏᴍᴏᴛᴇs ᴛʜᴇ ᴜsᴇʀ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.
 
-» /fullpromote: FullPromotes the user replied to.
+➯ /fullpromote: Fᴜʟʟᴘʀᴏᴍᴏᴛᴇs ᴛʜᴇ ᴜsᴇʀ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.
 
-» /demote: Demotes the user replied to.
+➯ /demote: Dᴇᴍᴏᴛᴇs ᴛʜᴇ ᴜsᴇʀ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.
 
-» /title <Title here>: Sets a custom title for an admin that the bot promoted.
+➯ /title <Tɪᴛʟᴇ ʜᴇʀᴇ>: Sᴇᴛs ᴀ ᴄᴜsᴛᴏᴍ ᴛɪᴛʟᴇ ғᴏʀ ᴀɴ ᴀᴅᴍɪɴ ᴛʜᴀᴛ ᴛʜᴇ ʙᴏᴛ ᴘʀᴏᴍᴏᴛᴇᴅ.
 
-» /admincache: Force refresh the admins list.
+➯ /admincache: Fᴏʀᴄᴇ ʀᴇғʀᴇsʜ ᴛʜᴇ ᴀᴅᴍɪɴs ʟɪsᴛ.</blockquote>
 """
 
 # <================================================ HANDLER =======================================================>
@@ -1123,7 +1123,7 @@ function(SET_TITLE_HANDLER)
 function(ADMIN_REFRESH_HANDLER)
 function(ADMIN_CALLBACK_HANDLER)
 
-__mod_name__ = "ADMIN"
+__mod_name__ = "˹ ᴀᴅᴍɪɴ ˼"
 __command_list__ = [
     "adminlist",
     "admins",
