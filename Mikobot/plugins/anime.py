@@ -5132,29 +5132,26 @@ QUOTES_IMG = [
 
 # <================================================= HELP ======================================================>
 __help__ = """
-⛩ *Anime:*
+<blockquote>Aɴɪᴍᴇ:
+➠ Dᴀᴢᴀɪ ᴘʀᴏᴠɪᴅᴇs ʏᴏᴜ ᴛʜᴇ ʙᴇsᴛ ᴀɴɪᴍᴇ-ʙᴀsᴇᴅ ᴄᴏᴍᴍᴀɴᴅs ɪɴᴄʟᴜᴅɪɴɢ ᴀɴɪᴍᴇ ɴᴇᴡs ᴀɴᴅ ᴍᴜᴄʜ ᴍᴏʀᴇ!</blockquote>
 
-➠ *Dazai provides you the best anime-based commands including anime news and much more!*
+➥ Cᴏᴍᴍᴀɴᴅs:
 
-➠ *Commands:*
-
-» /anime: fetches info on single anime (includes buttons to look up for prequels and sequels)
-» /character: fetches info on multiple possible characters related to query
-» /manga: fetches info on multiple possible mangas related to query
-» /airing: fetches info on airing data for anime
-» /studio: fetches info on multiple possible studios related to query
-» /schedule: fetches scheduled animes
-» /browse: get popular, trending or upcoming animes
-
-➠ /animequotes: get random anime quotes
-
-» /anisettings: to toggle NSFW lock and airing notifications and other settings in groups (anime news)
-» /top: to retrieve top animes for a genre or tag
-» /watch: fetches watch order for anime series
-» /fillers: to get a list of anime fillers
-» /gettags: get a list of available tags
-» /getgenres - Get list of available Genres
+<blockquote>➯ /anime: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ sɪɴɢʟᴇ ᴀɴɪᴍᴇ (ɪɴᴄʟᴜᴅᴇs ʙᴜᴛᴛᴏɴs ᴛᴏ ʟᴏᴏᴋ ᴜᴘ ғᴏʀ ᴘʀᴇǫᴜᴇʟs ᴀɴᴅ sᴇǫᴜᴇʟs)
+➯ /character: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ ᴍᴜʟᴛɪᴘʟᴇ ᴘᴏssɪʙʟᴇ ᴄʜᴀʀᴀᴄᴛᴇʀs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ǫᴜᴇʀʏ
+➯ /manga: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ ᴍᴜʟᴛɪᴘʟᴇ ᴘᴏssɪʙʟᴇ ᴍᴀɴɢᴀs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ǫᴜᴇʀʏ
+➯ /airing: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ ᴀɪʀɪɴɢ ᴅᴀᴛᴀ ғᴏʀ ᴀɴɪᴍᴇ
+➯ /studio: ғᴇᴛᴄʜᴇs ɪɴғᴏ ᴏɴ ᴍᴜʟᴛɪᴘʟᴇ ᴘᴏssɪʙʟᴇ sᴛᴜᴅɪᴏs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ǫᴜᴇʀʏ
+➯ /schedule: ғᴇᴛᴄʜᴇs sᴄʜᴇᴅᴜʟᴇᴅ ᴀɴɪᴍᴇs
+➯ /browse: ɢᴇᴛ ᴘᴏᴘᴜʟᴀʀ, ᴛʀᴇɴᴅɪɴɢ ᴏʀ ᴜᴘᴄᴏᴍɪɴɢ ᴀɴɪᴍᴇs</blockquote>
+<blockquote>➯ /animequotes: ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀɴɪᴍᴇ ǫᴜᴏᴛᴇs.
+➯ /anisettings: ᴛᴏ ᴛᴏɢɢʟᴇ NSFW ʟᴏᴄᴋ ᴀɴᴅ ᴀɪʀɪɴɢ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴs ᴀɴᴅ ᴏᴛʜᴇʀs sᴇᴛᴛɪɴɢs ɪɴ ɢʀᴏᴜᴘs (ᴀɴɪᴍᴇ ɴᴇᴡs)
+➯ /top: ᴛᴏ ʀᴇᴛʀɪᴇᴠᴇ ᴛᴏᴘ ᴀɴɪᴍᴇs ғᴏʀ ᴀ ɢᴇɴʀᴇ ᴏʀ ᴛᴀɢ
+➯ /watch: ғᴇᴛᴄʜᴇs ᴡᴀᴛᴄʜ ᴏʀᴅᴇʀ ғᴏʀ ᴀɴɪᴍᴇ sᴇʀɪᴇs
+➯ /fillers: ᴛᴏ ɢᴇᴛ ᴀ ʟɪsᴛ ᴏғ ᴀɴɪᴍᴇ ғɪʟᴛᴇʀs
+➯ /gettags: ɢᴇᴛ ᴀ ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ᴛᴀɢs
+➯ /getgenres - Gᴇᴛ ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ɢᴇɴʀᴇs</blockquote>
 """
 
-__mod_name__ = "ANIME"
+__mod_name__ = "˹ ᴀɴɪᴍᴇ ˼"
 # <================================================== END =====================================================>
