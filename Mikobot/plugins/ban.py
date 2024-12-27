@@ -691,21 +691,21 @@ async def bans_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 __help__ = """
-» /kickme: kicks the user who issued the command
+<blockquote>➫ /kickme: Kɪᴄᴋs ᴛʜᴇ ᴜsᴇʀ ᴡʜᴏ ɪssᴜᴇᴅ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ</blockquote>
 
-➠ *Admins only:*
-» /ban <userhandle>: bans a user/channel. (via handle, or reply)
+<b><u>➠ Aᴅᴍɪɴ ᴏɴʟʏ :</u></b>
+<blockquote>➯ /ban &lt;userhandle&gt;: ʙᴀɴs ᴀ ᴜsᴇʀ/ᴄʜᴀɴɴᴇʟ. (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ)
 
-» /sban <userhandle>: Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
+➯ /sban &lt;userhandle&gt;: Sɪʟᴇɴᴛʟʏ ʙᴀɴ ᴀ ᴜsᴇʀ. Dᴇʟᴇᴛᴇs ᴄᴏᴍᴍᴀɴᴅ, Rᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ ᴀɴᴅ ᴅᴏᴇsɴ'ᴛ ʀᴇᴘʟʏ. (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ)
 
-» /tban <userhandle> x(m/h/d): bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+➯ /tban &lt;userhandle&gt; x(m/h/d): ʙᴀɴs ᴀ ᴜsᴇʀ ғᴏʀ <code>x</code> ᴛɪᴍᴇ. (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ). <code>m</code> = <code>minutes</code>, <code>h</code> = <code>hours</code>, <code>d</code> = <code>days</code>.
 
-» /unban <userhandle>: unbans a user/channel. (via handle, or reply)
+➯ /unban &lt;userhandle&gt;: ᴜɴʙᴀɴs ᴀ ᴜsᴇʀ/ᴄʜᴀɴɴᴇʟ. (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ)
 
-» /kick <userhandle>: kicks a user out of the group, (via handle, or reply)
+➯ /kick &lt;userhandle&gt;: ᴋɪᴄᴋs ᴀ ᴜsᴇʀ ᴏᴜᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ, (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ)</blockquote>
 
-➠ NOTE:
-    Banning or UnBanning channels only work if you reply to their message, so don't use their username to ban/unban.
+⚠️ NOTE:
+    Bᴀɴɴɪɴɢ ᴏʀ UɴBᴀɴɴɪɴɢ ᴄʜᴀɴɴᴇʟs ᴏɴʟʏ ᴡᴏʀᴋ ɪғ ʏᴏᴜ ʀᴇᴘʟʏ ᴛᴏ ᴛʜᴇɪʀ ᴍᴇssᴀɢᴇ, sᴏ ᴅᴏɴ'ᴛ ᴜsᴇ ᴛʜᴇɪʀ ᴜsᴇʀɴᴀᴍᴇ ᴛᴏ ban/unban.
 """
 
 BAN_HANDLER = CommandHandler(["ban", "sban"], ban, block=False)
@@ -728,7 +728,7 @@ function(ROAR_HANDLER)
 function(KICKME_HANDLER)
 function(BAN_CALLBACK_HANDLER)
 
-__mod_name__ = "BAN"
+__mod_name__ = "˹ ʙᴀɴ ˼"
 __handlers__ = [
     BAN_HANDLER,
     TEMPBAN_HANDLER,
