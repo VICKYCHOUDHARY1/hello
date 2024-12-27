@@ -51,9 +51,12 @@ async def palm_chatbot(client, message):
 
 
 __help__ = """
-➦ *Write Miko with any sentence it will work as chatbot.*
+<blockquote><b><u>Aʟʟ Cᴏᴍᴍᴀɴᴅ ᴜsᴇ /:</u></b></blockquote>
+<blockquote>➥ /askgpt &lt;wʀɪᴛᴇ ǫᴜᴇʀʏ&gt;: ᴀ ᴄʜᴀᴛɢᴘᴛ ʀᴇsᴘᴏɴᴅɪɴɢ ᴛᴏ ᴜsᴇʀ ǫᴜᴇʀɪᴇs.
 
-*Example*: Miko are you a bot?
+➥ /palm &lt;wʀɪᴛᴇ ᴘʀᴏᴍᴛ&gt;: Pᴇʀғᴏʀᴍs ᴀ ᴘᴀʟᴍ sᴇᴀʀᴄʜ ᴜsɪɴɢ ᴀ ᴄʜᴀᴛɢᴘᴛ.
+
+➥ /upscale &lt;ʀᴇᴘʟʏ ᴛᴏ ɪᴍᴀɢᴇ&gt;: Uᴘsᴄᴀʟᴇs ʏᴏᴜʀ ɪᴍᴀɢᴇ ǫᴜɪʟɪᴛʏ.</blockquote>
 """
 
-__mod_name__ = "CHATBOT"
+__mod_name__ = "˹ ᴄʜᴀᴛʙᴏᴛ ˼"
