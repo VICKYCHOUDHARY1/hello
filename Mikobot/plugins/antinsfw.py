@@ -175,15 +175,15 @@ async def nsfw_enable_disable(_, message):
 # <=================================================== HELP ====================================================>
 
 
-__mod_name__ = "ANTI-NSFW"
+__mod_name__ = "˹ ᴀɴᴛɪ-ɴsғᴡ ˼"
 
 __help__ = """
-*🔞 Helps in detecting NSFW material and removing it*.
+<blockquote>🔞 Hᴇʟᴘs ɪɴ ᴅᴇᴛᴇᴄᴛɪɴɢ NSFW ᴍᴀᴛᴇʀɪᴀʟ ᴀɴᴅ ʀᴇᴍᴏᴠɪɴɢ ɪᴛ.</blockquote>
 
-➠ *Usage:*
+<b><u>➠ Cᴏᴍᴍᴀɴᴅ:</u></b>
 
-» /antinsfw [on/off]: Enables Anti-NSFW system.
+<blockquote>➯ /antinsfw [on/off]: Eɴᴀʙʟᴇs ᴀɴᴛɪ-ɴsғᴡ sʏsᴛᴇᴍ.
 
-» /nsfwscan <reply to message>: Scans the file replied to.
+➯ /nsfwscan &lt;ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ&gt;: Sᴄᴀɴs ᴛʜᴇ ғɪʟᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.</blockquote>
 """
 # <================================================ END =======================================================>
