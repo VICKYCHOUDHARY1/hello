@@ -56,24 +56,24 @@ START_BTN = [
 GROUP_START_BTN = [
     [
         InlineKeyboardButton(
-            text="⇦ ADD ME ⇨",
+            text="˹ ᴧᴅᴅ ɱҽ ʙᴧʙʏ ˼",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="SUPPORT", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="CREATOR", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="˹ sᴜᴘᴘᴏʀᴛ ˼", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="˹ Oᴡɳᴇʀ ˼", url=f"tg://user?id={OWNER_ID}"),
     ],
 ]
 
 ALIVE_BTN = [
     [
-        ib(text="UPDATES", url="https://t.me/Hydra_Updates"),
-        ib(text="SUPPORT", url="https://t.me/hydraXsupport"),
+        ib(text="˹ ᴜᴘᴅᴀᴛᴇs ˼", url="https://t.me/BABY09_WORLD"),
+        ib(text="˹ sᴜᴘᴘᴏʀᴛ ˼", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
         ib(
-            text="⇦ ADD ME ⇨",
+            text="˹ ᴧᴅᴅ ɱҽ ʙᴧʙʏ ˼",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
