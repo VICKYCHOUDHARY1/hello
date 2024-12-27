@@ -22,36 +22,38 @@ from Mikobot import BOT_NAME, app
 @app.on_message(filters.command("alive"))
 async def alive(_, message: Message):
     library_versions = {
-        "PTB": telegram.__version__,
-        "TELETHON": telethon.__version__,
-        "PYROGRAM": pyrogram.__version__,
+        "❒ PTB": telegram.__version__,
+        "❒ Tᴇʟᴇᴛʜᴏɴ": telethon.__version__,
+        "❒ Pʏʀᴏɢʀᴀᴍ": pyrogram.__version__,
     }
 
     library_versions_text = "\n".join(
-        [f"➲ **{key}:** `{value}`" for key, value in library_versions.items()]
+        [f"{key}: `{value}`" for key, value in library_versions.items()]
     )
 
-    caption = f"""**HEY, I AM {BOT_NAME}**
+    caption = f"""<blockquote>Hᴇʏ, I Aᴍ {BOT_NAME}
 
-━━━━━━ 🌟✿🌟 ━━━━━━
-✪ **CREATOR:** [🄺🄰🅁🄼🄰](https://t.me/O_oKarma)
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+❒ Cʀᴇᴀᴛᴇʀ: <a href='https://t.me/BABY09_WORLD'> ˹ ʙᴀʙʏ-ᴍᴜsɪᴄ ™˼𓅂</a></blockquote>
 
-{library_versions_text}
+<blockquote>{library_versions_text}
 
-➲ **PYTHON:** `{version_info[0]}.{version_info[1]}.{version_info[2]}`
-➲ **BOT VERSION:** `2.1 Rx`
-━━━━━━ 🌟✿🌟 ━━━━━━"""
+❒ **Pʏᴛʜᴏɴ:** `{version_info[0]}.{version_info[1]}.{version_info[2]}`
+❒ **Bᴏᴛ Vᴇʀsɪᴏɴ: `2.1 Rx`
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰</blockquote>"""
 
     await message.reply_animation(
         random.choice(ALIVE_ANIMATION),
         caption=caption,
+        parse_mode="html",
         reply_markup=InlineKeyboardMarkup(ALIVE_BTN),
     )
+
 
 
 # <=======================================================================================================>
 
 
 # <================================================ NAME =======================================================>
-__mod_name__ = "ALIVE"
+__mod_name__ = "˹ ᴀʟɪᴠᴇ ˼"
 # <================================================ END =======================================================>
