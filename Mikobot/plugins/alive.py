@@ -4,7 +4,6 @@
 
 # <============================================== IMPORTS =========================================================>
 import random
-from telegram.constants import ParseMode
 from sys import version_info
 
 import pyrogram
@@ -23,30 +22,29 @@ from Mikobot import BOT_NAME, app
 @app.on_message(filters.command("alive"))
 async def alive(_, message: Message):
     library_versions = {
-        "❒ PTB": telegram.__version__,
-        "❒ Tᴇʟᴇᴛʜᴏɴ": telethon.__version__,
-        "❒ Pʏʀᴏɢʀᴀᴍ": pyrogram.__version__,
+        "**❒ PTB**": telegram.__version__,
+        "**❒ Tᴇʟᴇᴛʜᴏɴ**": telethon.__version__,
+        "**❒ Pʏʀᴏɢʀᴀᴍ**": pyrogram.__version__,
     }
 
     library_versions_text = "\n".join(
         [f"{key}: `{value}`" for key, value in library_versions.items()]
     )
 
-    caption = f"""<blockquote>Hᴇʏ, I Aᴍ {BOT_NAME}
+    caption = f"""**Hᴇʏ, I Aᴍ** {BOT_NAME}
 
 ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-❒ Cʀᴇᴀᴛᴇʀ: <a href='https://t.me/BABY09_WORLD'> ˹ ʙᴀʙʏ-ᴍᴜsɪᴄ ™˼𓅂</a></blockquote>
+❒ **Cʀᴇᴀᴛᴇʀ:** [˹ ʙᴀʙʏ-ᴍᴜsɪᴄ ™˼𓅂](https://t.me/BABY09_WORLD)
 
-<blockquote>{library_versions_text}
+{library_versions_text}
 
 ❒ **Pʏᴛʜᴏɴ:** `{version_info[0]}.{version_info[1]}.{version_info[2]}`
-❒ **Bᴏᴛ Vᴇʀsɪᴏɴ: `2.1 Rx`
-▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰</blockquote>"""
+❒ **Bᴏᴛ Vᴇʀsɪᴏɴ:** `2.1 Rx`
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰"""
 
     await message.reply_animation(
         random.choice(ALIVE_ANIMATION),
         caption=caption,
-        parse_mode="HTML",
         reply_markup=InlineKeyboardMarkup(ALIVE_BTN),
     )
 
