@@ -547,7 +547,7 @@ async def help_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 parse_mode="html",
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="Bᴀᴄᴋ 🔙", callback_data="help_back")]]
                 ),
             )
 
@@ -768,7 +768,7 @@ async def get_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="Bᴀᴄᴋ 🔙", callback_data="help_back")]]
             ),
         )
 
