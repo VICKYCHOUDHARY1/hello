@@ -698,35 +698,32 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-» `/filters`*:* List all active filters saved in the chat.
+<blockquote>➯ /filters: Lɪsᴛ ᴀʟʟ ᴀᴄᴛɪᴠᴇ ғɪʟᴛᴇʀs sᴀᴠᴇᴅ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.</blockquote>
 
-➠ *Admin only:*
+<b><u>➠ Aᴅᴍɪɴ ᴏɴʟʏ :</u></b>
+<blockquote>➯ /filter &lt;keyword&gt; &lt;reply message&gt;: Aᴅᴅ ᴀ ғɪʟᴛᴇʀs ᴛᴏ ᴛʜɪs ᴄʜᴀᴛ. Tʜᴇ ʙᴏᴛ ᴡɪʟʟ ɴᴏᴡ ʀᴇᴘʟʏ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ ᴡʜᴇɴᴇᴠᴇʀ 'keyword'\
+ɪs ᴍᴇɴᴛɪᴏɴᴇᴅ. Iғ ʏᴏᴜ ʀᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀs ᴡɪᴛʜ ᴀ ᴋᴇʏʙᴏᴀʀᴅ, ᴛʜᴇ ʙᴏᴛ ᴡɪʟʟ ʀᴇᴘʟʏ ᴡɪᴛʜ ᴛʜᴀᴛ sᴛɪᴄᴋᴇʀ. NOTE: ᴀʟʟ ғɪʟᴛᴇʀs \
+ᴋᴇʏᴡᴏʀᴅs ᴀʀᴇ ɪɴ ʟᴏᴡᴇʀᴄᴀsᴇ. Iғ ʏᴏᴜ ᴡᴀɴᴛ ʏᴏᴜʀ ᴋᴇʏᴡᴏʀᴅ ᴛᴏ ʙᴇ ᴀ sᴇɴᴛᴇɴsᴇ, ᴜsᴇ ǫᴜᴏᴛᴇs. ᴇɢ: /filter &quot;hey there&quot; How you \
+doin?</blockquote>
 
-» `/filter <keyword> <reply message>`*:* Add a filter to this chat. The bot will now reply that message whenever 'keyword'\
-is mentioned. If you reply to a sticker with a keyword, the bot will reply with that sticker. NOTE: all filter \
-keywords are in lowercase. If you want your keyword to be a sentence, use quotes. eg: /filter "hey there" How you \
-doin?
-
-➠ Separate diff replies by `%%%` to get random replies
-➠ *Example:*
-
-» `/filter "filtername"
+<b><u>➠ Sᴇᴘᴀʀᴀᴛᴇ ᴅɪғғ ʀᴇᴘʟɪᴇs ʙʏ </u></b><code>%%%</code> ᴛᴏ ɢᴇᴛ ʀᴀɴᴅᴏᴍ ʀᴇᴘʟɪᴇs
+<b><u>Exᴀᴍᴘʟᴇ :</u></b>
+<blockquote>➯ /filter &quot;filtername&quot;
  Reply 1
  %%%
  Reply 2
  %%%
- Reply 3`
+ Reply 3
+➯ /stop &lt;filter keyword&gt;: Sᴛᴏᴘ ᴛʜᴀᴛ ғɪʟᴛᴇʀ.</blockquote>
 
-» `/stop <filter keyword>`*:* Stop that filter.
+<b><u>➠ Gʀᴏᴜᴘ ᴏᴡɴᴇʀ ᴏɴʟʏ :</u></b>
+<blockquote>➯ /removeallfilters: Rᴇᴍᴏᴠᴇ ᴀʟʟ ᴄʜᴀᴛ ғɪʟᴛᴇʀs ᴀᴛ ᴏɴᴄᴇ.</blockquote>
 
-➠ *Chat creator only:*
-» `/removeallfilters`*:* Remove all chat filters at once.
-
-➠ *Note*: Filters also support markdown formatters like: {first}, {last} etc.. and buttons.
-➠ Now Supports media spoilers too, and media caption.
+<blockquote expandable>➠ Nᴏᴛᴇ: Fɪʟᴛᴇʀs ᴀʟsᴏ sᴜᴘᴘᴏʀᴛ ᴍᴀʀᴋᴅᴏᴡɴ ғᴏʀᴍᴀᴛᴛᴇʀs ʟɪᴋᴇ: {first}, {last} ᴇᴛᴄ.. ᴀᴍᴅ ʙᴜᴛᴛᴏɴs.
+Nᴏᴡ Sᴜᴘᴘᴏʀᴛs ᴍᴇᴅɪᴀ sᴘᴏɪʟᴇʀs ᴛᴏᴏ, ᴀɴᴅ ᴍᴇᴅɪᴀ ᴄᴀᴘᴛɪᴏɴ.</blockquote>
 """
 
-__mod_name__ = "FILTERS"
+__mod_name__ = "˹ ғɪʟᴛᴇʀs ˼"
 
 # <================================================ HANDLER =======================================================>
 FILTER_HANDLER = CommandHandler("filter", filters, block=False)
