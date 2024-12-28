@@ -410,18 +410,16 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-➠ *Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood will result in restricting that user.*
+<blockquote>➠ Aɴᴛɪғʟᴏᴏᴅ ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴛᴀᴋᴇ ᴀᴄᴛɪᴏɴs ᴏɴ ᴜsᴇʀs ᴛʜᴀᴛ sᴇɴᴅ ᴍᴏʀᴇ ᴛʜᴀɴ x ᴍᴇssᴀɢᴇs ɪɴ ᴀ ʀᴏᴡ. Eᴇxᴇᴇᴅɪɴɢ ᴛʜᴇ sᴇᴛ ғʟᴏᴏᴅ ᴡɪʟʟ ʀᴇsᴜɪʟᴛ ɪɴ ʀᴇsᴛʀɪᴄᴛɪɴɢ ᴛʜᴀᴛ ᴜsᴇʀ.</blockquote>
+<b><u>➠ Aᴅᴍɪɴ Oɴʟʏ :</u></b>
+<blockquote>➯ /flood: Gᴇʏ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴀɴᴛɪғʟᴏᴏᴅ sᴇᴛᴛɪɴɢs.
 
-➠ *Admin Only*
+➯ /setflood &lt;number/off/no&gt;: Sᴇᴛ ᴛʜᴇ ɴᴜᴍʙᴇʀ ᴏғ ᴍᴇssᴀɢᴇs ᴀғᴛᴇʀ ᴡʜɪᴄᴋ ᴛᴏ ᴛᴀᴋᴇ ᴀᴄᴛɪᴏɴ ᴏɴ ᴀ ᴜsᴇʀ. Sᴇᴛ ᴛᴏ '0', 'off', or 'no' ᴛᴏ ᴅɪsᴀʙʟᴇ.
 
-» /flood: Get the current antiflood settings.
-
-» /setflood <number/off/no>: Set the number of messages after which to take action on a user. Set to '0', 'off', or 'no' to disable.
-
-» /setfloodmode <action type>: Choose which action to take on a user who has been flooding. Options: ban/kick/mute/tban/tmute.
+➯ /setfloodmode &lt;action type&gt;: Cʜᴏᴏsᴇ ᴡʜɪᴄʜ ᴀᴄᴛɪᴏɴ ᴛᴏ ᴛᴀᴋᴇ ᴏɴ ᴀ ᴜsᴇʀ ᴡʜᴏ ʜᴀs ʙᴇᴇɴ ғʟᴏᴏᴅɪɴɢ. Oᴘᴛɪᴏɴs: ban/kick/mute/tban/tmute.</blockquote>
 """
 
-__mod_name__ = "ANTI-FLOOD"
+__mod_name__ = "˹ ᴀɴᴛɪ-ғʟᴏᴏᴅ ˼"
 
 # <================================================ HANDLER =======================================================>
 FLOOD_BAN_HANDLER = MessageHandler(
