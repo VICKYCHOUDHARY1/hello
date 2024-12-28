@@ -353,22 +353,21 @@ if is_module_loaded(FILENAME):
 
     # <=================================================== HELP ====================================================>
     __help__ = """
-» /cmds: Check the current status of disabled commands
+<blockquote>➯ /cmds: Cʜᴇᴄᴋ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛᴜs ᴏғ ᴅɪsᴀʙʟᴇᴅ ᴄᴏᴍᴍᴀɴᴅs</blockquote>
 
-➠ *Admins only*:
+<b><u>➠ Aᴅᴍɪɴ ᴏɴʟʏ :</u></b>
+<blockquote>➯ /enable &lt; cmd name &gt;: Eɴᴀʙʟᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ.
 
-» /enable < cmd name >: Enable that command.
+➯ /disable &lt; cmd name &gt;: Dɪsᴀʙʟᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ.
 
-» /disable < cmd name >: Disable that command.
+➯ /enablemodule &lt; module name &gt;: Eɴᴀʙʟᴇ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ɪɴ ᴛʜᴀᴛ ᴍᴏᴅᴜʟᴇ.
 
-» /enablemodule < module name >: Enable all commands in that module.
+➯ /disablemodule &lt; module name &gt;: Dɪsᴀʙʟᴇ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ɪɴ ᴛʜᴀᴛ ᴍᴏᴅᴜʟᴇ.
 
-» /disablemodule < module name >: Disable all commands in that module.
-
-» /listcmds: List all possible toggleable commands.
+➯ /listcmds: Lɪsᴛ ᴀʟʟ ᴘᴏssɪʙʟᴇ ᴛᴏɢɢʟᴇᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs.</blockquote>
     """
 
-    __mod_name__ = "DISABLE"
+    __mod_name__ = "˹ ᴅɪsᴀʙʟᴇ ˼"
 
 else:
     DisableAbleCommandHandler = CommandHandler
