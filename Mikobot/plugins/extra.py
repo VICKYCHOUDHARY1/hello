@@ -125,18 +125,17 @@ function(CallbackQueryHandler(close_callback, pattern="^close$", block=False))
 
 # <================================================= HELP ======================================================>
 __help__ = """
-➠ *Commands*:
+<b><u>➠ Cᴏᴍᴍᴀɴᴅs :</u></b>
+<blockquote>➯ /instadl, /insta &lt;link&gt;: Gᴇᴛ ɪɴsᴛᴀɢʀᴀᴍ ᴄᴏɴᴛᴇɴᴛs ʟɪᴋᴇ ʀᴇᴇʟs ᴠɪᴅᴇᴏ ᴏʀ ɪᴍᴀɢᴇs.
 
-» /instadl, /insta <link>: Get instagram contents like reel video or images.
+➯ /pyroping: Sᴇᴇ ᴘʏʀᴏᴘɪɴɢ.
 
-» /pyroping: see pyroping.
+➯ /hyperlink &lt;text&gt; &lt;link&gt; : Cʀᴇᴀᴛᴇ ᴀ ᴍᴀʀᴋᴅᴏᴡɴ ʜʏᴘᴇʀʟɪɴᴋ ᴡɪᴛʜ ᴛʜᴇ ᴘʀᴏᴠɪᴅᴇᴅ ᴛᴇxᴛ ᴀɴᴅ ʟɪɴᴋ.
 
-» /hyperlink <text> <link> : Creates a markdown hyperlink with the provided text and link.
+➯ /pickwinner &lt;participant1&gt; &lt;participant2&gt; ... : Pɪᴄᴋs ᴀ ʀᴀɴᴅᴏᴍ ᴡɪɴɴᴇʀ ғʀᴏᴍ ᴛʜᴇ ᴘʀᴏᴠɪᴅᴇᴅ ʟɪsᴛ ᴏғ ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛs.
 
-» /pickwinner <participant1> <participant2> ... : Picks a random winner from the provided list of participants.
-
-» /id: reply to get user id.
+➯ /id: ʀᴇᴘʟʏ ᴛᴏ ɢᴇᴛ ᴜsᴇʀ ɪᴅ.</blockquote>
 """
 
-__mod_name__ = "EXTRA"
+__mod_name__ = "˹ ᴇxᴛʀᴀ ˼"
 # <================================================ END =======================================================>
