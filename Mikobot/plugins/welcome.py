@@ -1247,30 +1247,37 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-➠ *Admins Only:*
+<b><u>➠ Aᴅᴍɪɴs ᴏɴʟʏ :</u></b>
 
-➠ *Default Welcome CMDS:*
-» /dwelcome on : Enables the default template welcome.
-» /dwelcome off : Disables the default template welcome.
+<b><u>➠ ᴅᴇғᴀᴜʟᴛ ᴡᴇʟᴄᴏᴍᴇ ᴄᴍᴅs :</u></b>
+<blockquote>➯ /dwelcome on : ᴇɴᴀʙʟᴇs ᴛʜᴇ ᴅᴇғᴀᴜʟᴛ ᴛᴇᴍᴘʟᴀᴛᴇ ᴡᴇʟᴄᴏᴍᴇ.
+➯ /dwelcome off : ᴅɪsᴀʙʟᴇs ᴛʜᴇ ᴅᴇғᴀᴜʟᴛ ᴛᴇᴍᴘʟᴀᴛᴇ ᴡᴇʟᴄᴏᴍᴇ.
+</blockquote><b><u>➠ ɴᴏʀᴍᴀʟ ᴡᴇʟᴄᴏᴍᴇ ᴄᴍᴅs :</u></b>
+<blockquote>➯ /welcome &lt;on/off&gt;: ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs.
 
-➠ *Normal Welcome CMDS:*
-» /welcome <on/off>: Enable/disable welcome messages.
-» /welcome: Shows current welcome settings.
-» /welcome noformat: Shows current welcome settings, without the formatting - useful to recycle your welcome messages!
-» /goodbye: Same usage and args as /welcome
-» /setwelcome <sometext>: Set a custom welcome message. If used replying to media, uses that media.
-» /setgoodbye <sometext>: Set a custom goodbye message. If used replying to media, uses that media.
-» /resetwelcome: Reset to the default welcome message.
-» /resetgoodbye: Reset to the default goodbye message.
-» /cleanwelcome <on/off>: On new member, try to delete the previous welcome message to avoid spamming the chat.
-» /welcomemutehelp: Gives information about welcome mutes.
-» /cleanservice <on/off>: Deletes Telegram's welcome/left service messages.
+➯ /welcome: sʜᴏᴡs ᴄᴜʀʀᴇɴᴛ ᴡᴇʟᴄᴏᴍᴇ sᴇᴛᴛɪɴɢs.
 
-➠ *Example:*
-User joined chat, user left chat.
+➯ /welcome noformat: sʜᴏᴡs ᴄᴜʀʀᴇɴᴛ ᴡᴇʟᴄᴏᴍᴇ sᴇᴛᴛɪɴɢs, ᴡɪᴛʜᴏᴜᴛ ᴛʜᴇ ғᴏʀᴍᴀᴛᴛɪɴɢ - ᴜsᴇғᴜʟ ᴛᴏ ʀᴇᴄʏᴄʟᴇ ʏᴏᴜʀ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs!
 
-➠ *Welcome Markdown:*
-» /welcomehelp: View more formatting information for custom welcome/goodbye messages.
+➯ /goodbye: sᴀᴍᴇ ᴜsᴀɢᴇ ᴀɴᴅ ᴀʀɢs ᴀs /welcome
+
+➯ /setwelcome &lt;sometext&gt;: sᴇᴛ ᴀ ᴄᴜsᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ. ɪғ ᴜsᴇᴅ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴍᴇᴅɪᴀ, ᴜsᴇs ᴛʜᴀᴛ ᴍᴇᴅɪᴀ.
+
+➯ /setgoodbye &lt;sometext&gt;: sᴇᴛ ᴀ ᴄᴜsᴛᴏᴍ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ. ɪғ ᴜsᴇᴅ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴍᴇᴅɪᴀ, ᴜsᴇs ᴛʜᴀᴛ ᴍᴇᴅɪᴀ.
+
+➯ /resetwelcome: ʀᴇsᴇᴛ ᴛᴏ ᴛʜᴇ ᴅᴇғᴀᴜʟᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ.
+
+➯ /resetgoodbye: ʀᴇsᴇᴛ ᴛᴏ ᴛʜᴇ ᴅᴇғᴀᴜʟᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ.
+
+➯ /cleanwelcome &lt;on/off&gt;: ᴏɴ ɴᴇᴡ ᴍᴇᴍʙᴇʀ, ᴛʀʏ ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ᴘʀᴇᴠɪᴏᴜs ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀᴠᴏɪᴅ sᴘᴀᴍᴍɪɴɢ ᴛʜᴇ ᴄʜᴀᴛ.
+
+➯ /welcomemutehelp: ɢɪᴠᴇs ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴜᴛᴇs.
+
+➯ /cleanservice &lt;on/off&gt;: ᴅᴇʟᴇᴛᴇs ᴛᴇʟᴇɢʀᴀᴍ's ᴡᴇʟᴄᴏᴍᴇ/ʟᴇғᴛ sᴇʀᴠɪᴄᴇ ᴍᴇssᴀɢᴇs.</blockquote>
+<blockquote>➠ Exᴀᴍᴘʟᴇ :
+Usᴇʀ ᴊᴏɪɴᴇᴅ ᴄʜᴀᴛ, ᴜsᴇʀ ʟᴇғᴛ ᴄʜᴀᴛ.</blockquote>
+<b><u>➠ Wᴇʟᴄᴏᴍᴇ ᴍᴀʀᴋᴅᴏᴡɴ :</u></b>
+<blockquote>➯ /welcomehelp: ᴠɪᴇᴡ ᴍᴏʀᴇ ғᴏʀᴍᴀᴛᴛɪɴɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ғᴏʀ ᴄᴜsᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ/ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs.</blockquote>
 """
 
 # <================================================ HANDLER =======================================================>
@@ -1328,7 +1335,7 @@ function(CLEAN_SERVICE_HANDLER)
 function(BUTTON_VERIFY_HANDLER)
 function(WELCOME_MUTE_HELP)
 
-__mod_name__ = "WELCOME"
+__mod_name__ = "˹ ᴡᴇʟᴄᴏᴍᴇ ˼"
 __command_list__ = []
 __handlers__ = [
     NEW_MEM_HANDLER,
