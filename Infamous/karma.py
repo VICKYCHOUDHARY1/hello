@@ -79,10 +79,8 @@ ALIVE_BTN = [
     ],
 ]
 
-HELP_STRINGS = """
-🫧 *Yae-Miko* 🫧 [ㅤ](https://telegra.ph/file/b05535884267a19ee5c93.jpg)
-
-☉ *Here, you will find a list of all the available commands.*
-
-ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /
+HELP_STRINGS = """```
+☉ Hᴇʀᴇ ɪs ʏᴏᴜʀ ᴀʟʟ ʜᴇʟᴘᴇʀ 
+ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /```
+[ㅤ](https://files.catbox.moe/avwnu7.jpg)
 """
