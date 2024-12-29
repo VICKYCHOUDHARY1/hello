@@ -492,29 +492,28 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-» /warns <userhandle>: get a user's number, and reason, of warns.
+<blockquote>➯ /warns &lt;userhandle&gt;: ɢᴇᴛ ᴀ ᴜsᴇʀ's ɴᴜᴍʙᴇʀ, ᴀɴᴅ ʀᴇᴀsᴏɴ, ᴏғ ᴡᴀʀɴs.
 
-» /warnlist: list of all current warning filters
+➯ /warnlist: ʟɪsᴛ ᴏғ ᴀʟʟ ᴄᴜʀʀᴇɴᴛ ᴡᴀʀɴɪɴɢ ғɪʟᴛᴇʀs</blockquote>
 
-➠ *Admins only:*
+<b><u>➠ Aᴅᴍɪɴ ᴏɴʟʏ :</u></b>
+<blockquote>➯ /warn &lt;userhandle&gt;: ᴡᴀʀɴ ᴀ ᴜsᴇʀ. ᴀғᴛᴇʀ 3 ᴡᴀʀɴs, ᴛʜᴇ ᴜsᴇʀ ᴡɪʟʟ ʙᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ. ᴄᴀɴ ᴀʟsᴏ ʙᴇ ᴜsᴇᴅ ᴀs ᴀ ʀᴇᴘʟʏ.
 
-» /warn <userhandle>: warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
+➯ /dwarn &lt;userhandle&gt;: ᴡᴀʀɴ ᴀ ᴜsᴇʀ ᴀɴᴅ ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ᴍᴇssᴀɢᴇ. ᴀғᴛᴇʀ 3 ᴡᴀʀɴs, ᴛʜᴇ ᴜsᴇʀ ᴡɪʟʟ ʙᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ. ᴄᴀɴ ᴀʟsᴏ ʙᴇ ᴜsᴇᴅ ᴀs ᴀ ʀᴇᴘʟʏ.
 
-» /dwarn <userhandle>: warn a user and delete the message. After 3 warns, the user will be banned from the group. Can also be used as a reply.
+➯ /resetwarn &lt;userhandle&gt;: ʀᴇsᴇᴛ ᴛʜᴇ ᴡᴀʀɴs ғᴏʀ ᴀ ᴜsᴇʀ. ᴄᴀɴ ᴀʟsᴏ ʙᴇ ᴜsᴇᴅ ᴀs ᴀ ʀᴇᴘʟʏ.
 
-» /resetwarn <userhandle>: reset the warns for a user. Can also be used as a reply.
+➯ /addwarn &lt;keyword&gt; &lt;reply message&gt;: sᴇᴛ ᴀ ᴡᴀʀɴɪɴɢ ғɪʟᴛᴇʀ ᴏɴ ᴀ ᴄᴇʀᴛᴀɪɴ ᴋᴇʏᴡᴏʀᴅ. ɪғ ʏᴏᴜ ᴡᴀɴᴛ ʏᴏᴜʀ ᴋᴇʏᴡᴏʀᴅ ᴛᴏ \
+ʙᴇ ᴀ sᴇɴᴛᴇɴᴄᴇ, ᴇɴᴄᴏᴍᴘᴀss ɪᴛ ᴡɪᴛʜ ǫᴜᴏᴛᴇs, ᴀs sᴜᴄʜ: /addwarn &quot;very angry&quot; This is an angry user.
 
-» /addwarn <keyword> <reply message>: set a warning filter on a certain keyword. If you want your keyword to \
-be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is an angry user`.
+➯ /nowarn &lt;keyword&gt;: sᴛᴏᴘ ᴀ ᴡᴀʀɴɪɴɢ ғɪʟᴛᴇʀ
 
-» /nowarn <keyword>: stop a warning filter
+➯ /warnlimit &lt;num&gt;: sᴇᴛ ᴛʜᴇ ᴡᴀʀɴɪɴɢ ʟɪᴍɪᴛ
 
-» /warnlimit <num>: set the warning limit
-
-» /strongwarn <on/yes/off/no>: If set to on, exceeding the warn limit will result in a ban. Else, will just kick.
+➯ /strongwarn &lt;on/yes/off/no&gt;: ɪғ sᴇᴛ ᴛᴏ ᴏɴ, ᴇxᴄᴇᴇᴅɪɴɢ ᴛʜᴇ ᴡᴀʀɴ ʟɪᴍɪᴛ ᴡɪʟʟ ʀᴇsᴜʟᴛ ɪɴ ᴀ ʙᴀɴ. ᴇʟsᴇ, ᴡɪʟʟ ᴊᴜsᴛ ᴋɪᴄᴋ.</blockquote>
 """
 
-__mod_name__ = "WARN"
+__mod_name__ = "˹ ᴡᴀʀɴ ˼"
 
 WARN_HANDLER = CommandHandler(
     ["warn", "dwarn"], warn_user, filters=filters.ChatType.GROUPS, block=False
