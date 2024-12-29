@@ -670,33 +670,31 @@ async def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-➠ Do stickers annoy you? or want to avoid people sharing links? or pictures? \
-You're in the right place!
-The locks module allows you to lock away some common items in the \
-telegram world; our bot will automatically delete them!
+<blockquote>➠ Dᴏ sᴛɪᴄᴋᴇʀs ᴀɴɴᴏɴʏ ʏᴏᴜ? ᴏʀ ᴡᴀɴᴛ ᴛᴏ ᴀᴠᴏɪᴅ ᴘᴇᴏᴘʟᴇ sʜᴀʀɪɴɢ ʟɪɴᴋ? ᴏʀ ᴘɪᴄᴛᴜʀᴇs? \
+Yᴏᴜ'ʀᴇ ɪɴ ᴛʜᴇ ʀɪɢʜᴛ ᴘʟᴀᴄᴇ!
+Tʜᴇ ʟᴏᴄᴋs ᴍᴏᴅᴜʟᴇs ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ʟᴏᴄᴋ ᴀᴡᴀʏ sᴏᴍᴇ ᴄᴏᴍᴍᴏɴ ɪᴛᴇᴍs ɪɴ ᴛʜᴇ \
+ᴛᴇʟᴇɢʀᴀᴍ ᴡᴏʀʟᴅ; ᴏᴜʀ ʙᴏᴛ ᴡɪʟʟ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇ ᴛʜᴇᴍ!</blockquote>
+<blockquote>➯ /locktypes: Lɪsᴛs ᴀʟʟ ᴘᴏssɪʙʟᴇ ʟᴏᴄᴋᴛʏᴘᴇ</blockquote>
 
-» /locktypes: Lists all possible locktypes
+<b><u>➠ Aᴅᴍɪɴs ᴏɴʟʏ :</u></b>
+<blockquote>➯ /lock &lt;type&gt;: Lᴏᴄᴋ ɪᴛᴇᴍs ᴏғ ᴀ ᴄᴇʀᴛᴀɪɴ ᴛʏᴘᴇ (not available in private)
+➯ /unlock &lt;type&gt;: Uɴʟᴏᴄᴋ ɪᴛᴇᴍs ᴏғ ᴀ ᴄᴇʀᴛᴀɪɴ ᴛʏᴘᴇ (not available in private)
+➯ /locks: Tʜᴇ ᴄᴜʀʀᴇɴᴛ ʟɪsᴛ ᴏғ ʟᴏᴄᴋs ɪɴ ᴛʜɪs ᴄʜᴀᴛs.</blockquote>
 
-➠ *Admins only:*
-» /lock <type>: Lock items of a certain type (not available in private)
-» /unlock <type>: Unlock items of a certain type (not available in private)
-» /locks: The current list of locks in this chat.
+<blockquote>➠ Lᴏᴄᴋs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴛᴏ ʀᴇsᴛʀɪᴄᴛ ᴀ ɢʀᴏᴜᴘ's ᴜsᴇʀs.
+ᴇɢ:
+Lᴏᴄᴋɪɴɢ urls ᴡɪʟʟ ᴀᴜᴛɪ-ᴅᴇʟᴇᴛᴇ ᴀʟʟ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ urls, ʟᴏᴄᴋɪɴɢ sᴛɪᴄᴋᴇʀs ᴡɪʟʟ ʀᴇsᴛʀɪᴄᴛ ᴀʟʟ \
+ɴᴏɴ-ᴀᴅᴍɪɴ ᴜsᴇʀs ғʀᴏᴍ sᴇɴᴅɪɴɢ sᴛɪᴄᴋᴇʀs, ᴇᴛᴄ.
+Lᴏᴄᴋɪɴɢ ʙᴏᴛs ᴡɪʟʟ sᴛᴏᴘ ɴᴏɴ-ᴀᴅᴍɪɴs ғʀᴏᴍ ᴀᴅᴅɪɴɢ ʙᴏᴛs ᴛᴏ ᴛʜᴇ ᴄʜᴀᴛ.
+Lᴏᴄᴋɪɴɢ ᴀɴᴏɴᴄʜᴀɴɴᴇʟ ᴡɪʟʟ sᴛᴏᴘ ᴀɴᴏɴʏᴍᴏᴜs ᴄʜᴀɴɴᴇʟ ғʀᴏᴍ ᴍᴇssᴀɢɪɴɢ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.</blockquote>
 
-➠ Locks can be used to restrict a group's users.
-eg:
-Locking urls will auto-delete all messages with urls, locking stickers will restrict all \
-non-admin users from sending stickers, etc.
-Locking bots will stop non-admins from adding bots to the chat.
-Locking anonchannel will stop anonymous channel from messaging in your group.
+<b><u>➠ Nᴏᴛᴇ :</u></b>
+<blockquote>➯ Uɴʟᴏᴄᴋɪɴɢ ᴘᴇʀᴍɪssɪᴏɴ ɪɴғᴏ ᴡɪʟʟ ᴀʟʟᴏᴡ ᴍᴇᴍʙᴇʀs <b><s>ɴᴏɴ-ᴀᴅᴍɪɴs</s></b> ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ ɢʀᴏᴜᴘ ɪɴғᴏʀᴍᴀᴛɪᴏɴ, sᴜᴄʜ ᴀs ᴛʜᴇ ᴅᴇsᴄʀɪᴘᴛɪᴏɴs ᴏʀ ᴛʜᴇ ɢʀᴏᴜᴘ ɴᴀᴍᴇ
 
-➠ *Note:*
-
-» Unlocking permission *info* will allow members (non-admins) to change the group information, such as the description or the group name
-
-» Unlocking permission *pin* will allow members (non-admins) to pin a message in a group
+➯ Uɴʟᴏᴄᴋɪɴɢ ᴘᴇʀᴍɪssɪᴏɴ ᴘɪɴ ᴡɪʟʟ ᴀʟʟᴏᴡ ᴍᴇᴍʙᴇʀs <b><s>ɴᴏɴ-ᴀᴅᴍɪɴs</s></b> ᴛᴏ ᴘɪɴ ᴀ ᴍᴇssᴀɢᴇ ɪɴ ᴀ ɢʀᴏᴜᴘ</blockquote>
 """
 
-__mod_name__ = "LOCKS"
+__mod_name__ = "˹ ʟᴏᴄᴋs ˼"
 
 LOCKTYPES_HANDLER = DisableAbleCommandHandler("locktypes", locktypes, block=False)
 LOCK_HANDLER = CommandHandler(
