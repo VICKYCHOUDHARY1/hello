@@ -161,14 +161,11 @@ function(
 
 # <================================================= HELP ======================================================>
 __help__ = """
-🏅 *Match 𝗦chedule*
+<b><u>➠ Mᴀᴛᴄʜ 🏅 sᴄʜᴇᴅᴜʟᴇ ᴄᴏᴍᴍᴀɴᴅs :</u></b>
+<blockquote>➯ /cricket: ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴛʜᴇ ɴᴇxᴛ ᴄʀɪᴄᴋᴇᴛ ᴍᴀᴛᴄʜ.
 
-➠ *Commands*:
-
-» /cricket: use this command to get information about the next cricket match.
-
-» /football: use this command to get information about the next football match.
+➯ /football: ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴛʜᴇ ɴᴇxᴛ ғᴏᴏᴛʙᴀʟʟ ᴍᴀᴛᴄʜ.</blockquote>
 """
 
-__mod_name__ = "SPORTS"
+__mod_name__ = "˹ sᴘᴏʀᴛs ˼"
 # <================================================== END =====================================================>
