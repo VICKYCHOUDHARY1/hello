@@ -221,11 +221,10 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 __help__ = """
-*Overall information about user:*
+<b><u>➠ Oᴠᴇʀᴀʟʟ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴜsᴇʀ :</u></b>
+<blockquote>➯ /info : Fᴇᴛᴄʜ ᴜsᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ.
 
-» /info : Fetch user information.
-
-» /uinfo : Fetch user information in banner.
+➯ /uinfo : Fᴇᴛᴄʜ ᴜsᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ɪɴ ʙᴀɴɴᴇʀ.</blockquote>
 """
 
 # <================================================ HANDLER =======================================================>
@@ -235,7 +234,7 @@ INFO_HANDLER = CommandHandler(("info", "book"), info, block=False)
 function(STATS_HANDLER)
 function(INFO_HANDLER)
 
-__mod_name__ = "INFO"
+__mod_name__ = "˹ ɪɴғᴏ ˼"
 __command_list__ = ["info"]
 __handlers__ = [INFO_HANDLER, STATS_HANDLER]
 # <================================================ END =======================================================>
