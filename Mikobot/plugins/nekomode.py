@@ -95,37 +95,36 @@ async def nekomode_commands(event):
 
 
 __help__ = """
-*✨ Sends fun Gifs/Images*
+<blockquote>➥ Sᴇɴᴅs ғᴜɴ Gifs/Images
+➥ /nekomode on : Eɴᴀʙʟᴇs ғᴜɴ ɴᴇᴋᴜ ᴍᴏᴅᴇ.
+➥ /nekomode off : Dɪsᴀʙʟᴇs ғᴜɴ ɴᴇᴋᴏ ᴍᴏᴅᴇ.</blockquote>
 
-➥ /nekomode on : Enables fun neko mode.
-➥ /nekomode off : Disables fun neko mode
-
-» /bully: sends random bully gifs.
-» /neko: sends random neko gifs.
-» /wallpaper: sends random wallpapers.
-» /highfive: sends random highfive gifs.
-» /tickle: sends random tickle GIFs.
-» /wave: sends random wave GIFs.
-» /smile: sends random smile GIFs.
-» /feed: sends random feeding GIFs.
-» /blush: sends random blush GIFs.
-» /avatar: sends random avatar stickers.
-» /waifu: sends random waifu stickers.
-» /kiss: sends random kissing GIFs.
-» /cuddle: sends random cuddle GIFs.
-» /cry: sends random cry GIFs.
-» /bonk: sends random cuddle GIFs.
-» /smug: sends random smug GIFs.
-» /slap: sends random slap GIFs.
-» /hug: get hugged or hug a user.
-» /pat: pats a user or get patted.
-» /spank: sends a random spank gif.
-» /dance: sends a random dance gif.
-» /poke: sends a random poke gif.
-» /wink: sends a random wink gif.
-» /bite: sends random bite GIFs.
-» /handhold: sends random handhold GIFs.
+<blockquote>➯ /bully: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ʙᴜʟʟʏ Gɪғs.
+➯ /neko: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ɴᴇᴋᴏ Gɪғs.
+➯ /wallpaper: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ᴡᴀʟʟᴘᴀᴘᴇʀs.
+➯ /highfive: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ʜɪɢʜғɪᴠᴇ Gɪғs.
+➯ /tickle: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ᴛɪᴄᴋʟᴇ Gɪғs.
+➯ /wave: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ᴡᴀᴠᴇ Gɪғs.
+➯ /smile: sᴇɴᴅs ʀᴀɴᴅᴏᴍ sᴍɪʟᴇ Gɪғs.
+➯ /feed: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ғᴇᴇᴅɪɴɢ Gɪғs.
+➯ /blush: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ʙʟᴜsʜ Gɪғs.
+➯ /avatar: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ᴀᴠᴀᴛᴀʀ stickers.
+➯ /waifu: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ᴡᴀɪғᴜ stickers.
+➯ /kiss: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ᴋɪssɪɴɢ Gɪғs.
+➯ /cuddle: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ᴄᴜᴅᴅʟᴇ Gɪғs.
+➯ /cry: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ᴄʀʏ Gɪғs.
+➯ /bonk: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ᴄᴜᴅᴅʟᴇ Gɪғs.
+➯ /smug: sᴇɴᴅs ʀᴀɴᴅᴏᴍ sᴍᴜɢ Gɪғs.
+➯ /slap: sᴇɴᴅs ʀᴀɴᴅᴏᴍ sʟᴀᴘ Gɪғs.
+➯ /hug: ɢᴇᴛ ʜᴜɢɢᴇᴅ ᴏʀ ʜᴜɢ ᴀ user.
+➯ /pat: ᴘᴀᴛs ᴀ ᴜsᴇʀ ᴏʀ ɢᴇᴛ ᴘᴀᴛᴛᴇᴅ.
+➯ /spank: sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ sᴘᴀɴᴋ ɢɪғ.
+➯ /dance: sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀɴᴄᴇ ɢɪғ.
+➯ /poke: sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴘᴏᴋᴇ ɢɪғ.
+➯ /wink: sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴡɪɴᴋ ɢɪғ.
+➯ /bite: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ʙɪᴛᴇ Gɪғs.
+➯ /handhold: sᴇɴᴅs ʀᴀɴᴅᴏᴍ ʜᴀɴᴅʜᴏʟᴅ Gɪғs.</blockquote>
 """
 
-__mod_name__ = "NEKO"
+__mod_name__ = "˹ ɴᴇᴋᴏ ˼"
 # <================================================ END =======================================================>
