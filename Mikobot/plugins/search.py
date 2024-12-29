@@ -164,22 +164,19 @@ async def googleimg_search(client: Client, message: Message):
 
 
 # <=================================================== HELP ====================================================>
-__mod_name__ = "SEARCH"
+__mod_name__ = "˹ sᴇᴀʀᴄʜ ˼"
 
 __help__ = """
-💭 𝗦𝗘𝗔𝗥𝗖𝗛
+<b><u>➠ Sᴇᴀʀᴄʜ ᴄᴏᴍᴍᴀɴᴅs :</u></b>
+<blockquote>➯ /googleimg &lt;search query&gt;: ɪᴛ ʀᴇᴛʀɪᴇᴠᴇs ᴀɴᴅ ᴅɪsᴘʟᴀʏ ɪᴍᴀɢᴇs ᴏʙᴛᴀɪɴᴇᴅ ᴛʜʀᴏᴜɢʜᴛ ᴀ ɢᴏᴏɢʟᴇ ɪᴍᴀɢᴇ sᴇᴀʀᴄʜ.
 
-➠ *Available commands:*
+➯ /bingimg &lt;search query&gt;: ɪᴛ ʀᴇᴛʀɪᴇᴠᴇs ᴀɴᴅ ᴅɪsᴘʟᴀʏ ɪᴍᴀɢᴇs ᴏʙᴛᴀɪɴᴇᴅ ᴛʜʀᴏᴜɢʜᴛ ᴀ ʙɪɴɢ ɪᴍᴀɢᴇ sᴇᴀʀᴄʜ.
 
-» /googleimg <search query>: It retrieves and displays images obtained through a Google image search.
+➯ /news &lt;search query&gt; : sᴇᴀʀᴄʜ ɴᴇᴡs.
 
-» /bingimg <search query>: It retrieves and displays images obtained through a Bing image search.
+➯ /bingsearch &lt;search query&gt; : ɢᴇᴛ sᴇᴀʀᴄʜ ʀᴇsᴜɪʟᴛ ᴡɪᴛʜ ʟɪɴᴋs.</blockquote>
 
-» /news <search query> : search news.
-
-» /bingsearch <search query> : get search result with links.
-
-➠ *Example:*
-➠ `/bingsearch app`: return search results.
+<b><u>➠ Exᴀᴍᴘʟᴇ :</u></b>
+<blockquote>➯ /bingsearch app: ʀᴇᴛᴜʀɴ sᴇᴀʀᴄʜ ʀᴇsᴜɪʟᴛs.</blockquote>
 """
 # <================================================ END =======================================================>
