@@ -508,13 +508,12 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = f"""
-➠ *Admins only:*
+<b><u>➠ Aᴅᴍɪɴs ᴏɴʟʏ :</u></b>
+<blockquote>➯ /antispam &lt;on/off/yes/no&gt;: Wɪʟʟ ᴛᴏɢɢʟᴇ ᴏᴜʀ ᴀɴᴛɪsᴘᴀᴍ ᴛᴇᴄʜ ᴏʀ ʀᴇᴛᴜʀɴ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ sᴇᴛᴛɪɴɢs.</blockquote>
 
-» /antispam <on/off/yes/no>: Will toggle our antispam tech or return your current settings.
-
-➠ Anti-Spam, used by bot devs to ban spammers across all groups. This helps protect \
-you and your groups by removing spam flooders as quickly as possible.
-➠ *Note:* Users can appeal gbans or report spammers at @hydraX2support
+<blockquote>➠ Aɴᴛɪ-Sᴘᴀᴍ, ᴜsᴇᴅ ʙʏ ʙᴏᴛ ᴅᴇᴠs ᴛᴏ ʙᴀɴ sᴘᴀᴍᴍᴇʀ ᴀᴄʀᴏss ᴀʟʟ ɢʀᴏᴜᴘs. ᴛʜɪs ʜᴇʟᴘs ᴘʀᴏᴛᴇᴄᴛ \
+ʏᴏᴜʀ ᴀɴᴅ ʏᴏᴜʀ ɢʀᴏᴜᴘs ʙʏ ʀᴇᴍᴏᴠɪɴɢ sᴘᴀᴍ ғʟᴏᴏᴅᴇʀs ᴀs ǫᴜɪᴄᴋʟʏ ᴀs ᴘᴏssɪʙʟᴇ.
+➠ Note: Usᴇʀs ᴄᴀɴ ᴀᴘᴘᴇᴀʟ ɢʙᴀɴs ᴏʀ ʀᴇᴘᴏʀᴛ sᴘᴀᴍᴍᴇʀs ᴀᴛ @UTTAM470</blockquote>
 """
 
 # <================================================ HANDLER =======================================================>
@@ -535,7 +534,7 @@ function(UNGBAN_HANDLER)
 function(GBAN_LIST)
 function(GBAN_STATUS)
 
-__mod_name__ = "ANTI-SPAM"
+__mod_name__ = "˹ ᴀɴᴛɪ-sᴘᴀᴍ ˼"
 __handlers__ = [GBAN_HANDLER, UNGBAN_HANDLER, GBAN_LIST, GBAN_STATUS]
 
 if STRICT_GBAN:  # enforce GBANS if this is set
