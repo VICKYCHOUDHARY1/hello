@@ -611,35 +611,34 @@ async def give_st_info(c: app, m: Message):
 
 # <=================================================== HELP ====================================================>
 __help__ = """
-➠ *👨‍🏫 User Commands:*
+<b><u>➠ 👨‍🏫 Usᴇʀ ᴄᴏᴍᴍᴀɴᴅs :</u></b>
+<blockquote>➯ /kang (/steal) &lt; emoji &gt;: Rᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀs ᴏʀ ᴀɴʏ sᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴇᴅɪᴀ.
 
-» /kang (/steal) < emoji >: Reply to a sticker or any supported media.
+➯ /pkang: Rᴇᴘʟʏ ᴛᴏ ᴀ ɪᴍᴀɢᴇ ᴛʏᴘᴇ sᴛɪᴄᴋᴇʀs ᴛᴏ ɢᴇᴛ ғᴜʟʟ ᴘᴀᴄᴋ.
 
-» /pkang: Reply to a image type sticker to get full pack.
+➯ /stickerinfo (/stinfo) : Rᴇᴘʟʏ ᴛᴏ ᴀɴʏ sᴛɪᴄᴋᴇʀs ᴛᴏ ɢᴇᴛ ɪᴛ's ɪɴғᴏ.
 
-» /stickerinfo (/stinfo) : Reply to any sticker to get it's info.
+➯ /stickerid : Rᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀs ᴍᴇssᴀɢᴇ ᴛᴏ ɢᴇᴛ ᴛʜᴇ sᴛɪᴄᴋᴇʀs ID ᴀɴᴅ Eᴍᴏᴊɪ.
 
-» /stickerid Reply to a sticker message to get the sticker ID and emoji.
+➯ /stickers &lt; query &gt;: Sᴇᴀʀᴄʜ ғᴏʀ sᴛɪᴄᴋᴇʀs ᴘᴀᴄᴋs ʙᴀsᴇᴅ ᴏɴ ᴛʜᴇ ɢɪᴠᴇɴ ǫᴜᴇʀʏ.
 
-» /stickers < query >: Search for sticker packs based on the given query.
+➯ /getsticker: Rᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀs ᴍᴇssᴀɢᴇ ᴛᴏ ɢᴇᴛ ᴛʜᴇ sᴛɪᴄᴋᴇʀ ᴀs ᴀ ᴅᴏᴄᴜᴍᴇɴᴛ.
 
-» /getsticker: Reply to a sticker message to get the sticker as a document.
+➯ /getvidsticker: Rᴇᴘʟʏ ᴛᴏ ᴀ ᴠɪᴅᴇᴏ sᴛɪᴄᴋᴇʀ ᴍᴇssᴀɢᴇ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴠɪᴅᴇᴏ ᴀs ᴀɴ ᴀɴɪᴍᴀᴛɪᴏɴ.
 
-» /getvidsticker: Reply to a video sticker message to get the video as an animation.
+➯ /getvideo: Rᴇᴘʟʏ ᴛᴏ ᴀ GIF ᴍᴇssᴀɢᴇ ᴛᴏ ɢᴇᴛ ᴛʜᴇ GIF ᴀs ᴀ ᴠɪᴅᴇᴏ.
 
-» /getvideo: Reply to a GIF message to get the GIF as a video.
+➯ /unkang: Rᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀs ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ɪᴛ ғʀᴏᴍ ʏᴏᴜʀ ᴘᴀᴄᴋ.
 
-» /unkang: Reply to a sticker created by the bot to remove it from your pack.
-
-» /mmf < your text >: Reply to a normal sticker or a photo or video file to memify it. If you want to right text at bottom use `;right your message`
+➯ /mmf &lt; your text &gt;: Rᴇᴘʟʏ ᴛᴏ ᴀ ɴᴏʀᴍᴀʟ sᴛɪᴄᴋᴇʀs ᴏʀ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴠɪᴅᴇᴏ ғɪʟᴇ ᴛᴏ ᴍᴇᴍɪғʏ ɪᴛ. Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀɪɢʜᴛ ᴛᴇxᴛ ᴀᴛ ʙᴜᴛᴛᴏᴍ ᴜsᴇ ;right your message
     ■ For e.g. 
-    ○ /mmf Hello freinds : this will add text to the top
-    ○ /mmf Hello ; freinds : this will add Hello to the top and freinds at the bottom
-    ○ /mmf ; Hello friends : this will add text at the bottom
+    ○ /mmf Hello freinds : ᴛʜɪs ᴡɪʟʟ ᴀᴅᴅ ᴛᴇxᴛ ᴛᴏ ᴛʜᴇ ᴛᴏᴘ.
+    ○ /mmf Hello ; freinds : ᴛʜɪs ᴡɪʟʟ ᴀᴅᴅ ʜᴇʟʟᴏ ᴛᴏ ᴛʜᴇ ᴛᴏᴘ ᴀɴᴅ ғʀɪᴇɴᴅs ᴀᴛ ᴛʜᴇ ʙᴏᴛᴛᴏᴍ.
+    ○ /mmf ; Hello friends : ᴛʜɪs ᴡɪʟʟ ᴀᴅᴅ ᴛᴇxᴛ ᴀᴛ ᴛʜᴇ ʙᴏᴛᴛᴏᴍ.</blockquote>
 
-➠ *Note*
-➠ *mmf and getsticker only support photo and normal stickers for now*.
+<b><u>➠ Nᴏᴛᴇ :</u></b>
+<blockquote>➠ ᴍᴍғ ᴀɴᴅ ɢᴇᴛsᴛɪᴄᴋᴇʀs ᴏɴʟʏ sᴜᴘᴘᴏʀᴛ ᴘʜᴏᴛᴏ ᴀɴᴅ ɴᴏʀᴍᴀʟ sᴛɪᴄᴋᴇʀs ғᴏʀ ɴᴏᴡ.</blockquote>
 """
 
-__mod_name__ = "STICKERS"
+__mod_name__ = "˹ sᴛɪᴄᴋᴇʀs ˼"
 # <================================================ END =======================================================>
