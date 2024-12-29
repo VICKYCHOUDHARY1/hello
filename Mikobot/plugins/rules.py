@@ -146,15 +146,15 @@ def __chat_settings__(chat_id, user_id):
 
 # <================================================= HELP ======================================================>
 __help__ = """
-➠ /rules: Get the rules for this chat.
+<blockquote>➠ /rules: Gᴇᴛ ᴛʜᴇ ʀᴜʟᴇs ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ.</blockquote>
 
-➠ *Admins only*:
-» /setrules <your rules here>: Set the rules for this chat.
+<b><u>➠ Aᴅᴍɪɴ ᴏɴʟʏ :</u></b>
+<blockquote>➯ /setrules &lt;your rules here&gt;: Sᴇᴛ ᴛʜᴇ ʀᴜʟᴇs ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ.
 
-» /clearrules: Clear the rules for this chat.
+➯ /clearrules: Cʟᴇᴀʀ ᴛʜᴇ ʀᴜʟᴇs ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ.</blockquote>
 """
 
-__mod_name__ = "RULES"
+__mod_name__ = "˹ ʀᴜʟᴇs ˼"
 
 # <================================================ HANDLER =======================================================>
 function(
