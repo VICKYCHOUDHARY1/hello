@@ -592,33 +592,32 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- » /get <notename> : get the note with this notename
- » #<notename> : same as /get
- » /notes or /saved : list all saved notes in this chat
- » /number : Will pull the note of that number in the list
- ➠ If you would like to retrieve the contents of a note without any formatting, use `/get <notename> noformat`. This can \
-be useful when updating a current note
+ <blockquote>➯ /get &lt;notename&gt; : ɢᴇᴛ ᴛʜᴇ ɴᴏᴛᴇ ᴡɪᴛʜ ᴛʜɪs ɴᴏᴛᴇɴᴀᴍᴇ
+ ➯ #&lt;notename&gt; : sᴀᴍᴇ ᴀs /get
+ ➯ /notes or /saved : ʟɪsᴛ ᴀʟʟ sᴀᴠᴇᴅ ɴᴏᴛᴇs ɪɴ ᴛʜɪs ᴄʜᴀᴛ
+ ➯ /number : Wɪʟʟ ᴘᴜʟʟ ᴛʜᴇ ɴᴏᴛᴇ ᴏғ ᴛʜᴀᴛ ɴᴜᴍʙᴇʀ ɪɴ ᴛʜᴇ ʟɪsᴛ
+ ➠ Iғ ʏᴏᴜ ᴡᴏᴜʟᴅ ʟɪᴋᴇ ᴛᴏ ʀᴇᴛʀɪᴇᴠᴇ ᴛʜᴇ ᴄᴏɴᴛᴇɴᴛs ᴏғ ᴀ ɴᴏᴛᴇ ᴡɪᴛʜᴏᴜᴛ ᴀɴʏ ғᴏʀᴍᴀᴛᴛɪɴɢ, ᴜsᴇ /get &lt;notename&gt; noformat. Tʜɪs ᴄᴀɴ \
+ʙᴇ ᴜsᴇғᴜʟ ᴡʜᴇɴ ᴜᴘᴅᴀᴛɪɴɢ ᴀ ᴄᴜʀʀᴇɴᴛ ɴᴏᴛᴇ</blockquote>
 
-*Admins only:*
- » /save <notename> <notedata> : saves notedata as a note with name notename
- ➠ A button can be added to a note by using standard markdown link syntax - the link should just be prepended with a \
-`buttonurl:` section, as such: `[somelink](buttonurl:example.com)`. Check `/markdownhelp` for more info
- » /save <notename> : save the replied message as a note with name notename
- Separate diff replies by `%%%` to get random notes
- ➠ *Example:*
- `/save notename
+<b><u>➠ Aᴅᴍɪɴ ᴏɴʟʏ :</u></b>
+<blockquote> ➯ /save &lt;notename&gt; &lt;notedata&gt; : sᴀᴠᴇs ɴᴏᴛᴇᴅᴀᴛᴀ ᴀs ᴀ ɴᴏᴛᴇ ᴡɪᴛʜ ɴᴀᴍᴇ ɴᴏᴛᴇɴᴀᴍᴇ
+ ➠ A ʙᴜᴛᴛᴏɴ ᴄᴀɴ ʙᴇ ᴀᴅᴅᴇᴅ ᴛᴏ ᴀ ɴᴏᴛᴇ ʙʏ ᴜsɪɴɢ sᴛᴀɴᴅᴀʀᴅ ᴍᴀʀᴋᴅᴏᴡɴ ʟɪɴᴋ sʏɴᴛᴀx - ᴛʜᴇ ʟɪɴᴋ sʜᴏᴜʟᴅ ᴊᴜsᴛ ʙᴇ ᴘʀᴇᴘᴇɴᴅᴇᴅ ᴡɪᴛʜ ᴀ \
+buttonurl: section, as such: <a href="buttonurl:example.com">somelink</a>. Check /markdownhelp ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏ
+ ➯ /save &lt;notename&gt; : save the replied message as a note with name notename
+ sᴇᴘᴀʀᴀᴛᴇ ᴅɪғғ ʀᴇᴘʟɪᴇs ʙʏ %%% ᴛᴏ ɢᴇᴛ ʀᴀɴᴅᴏᴍ ɴᴏᴛᴇs
+ ➠ Exᴀᴍᴘʟᴇ :
+ /save notename
  Reply 1
  %%%
  Reply 2
  %%%
- Reply 3`
- » /clear <notename>: clear note with this name
- » /removeallnotes: removes all notes from the group
- ➠ *Note:* Note names are case-insensitive, and they are automatically converted to lowercase before getting saved.
-
+ Reply 3
+ ➯ /clear &lt;notename&gt;: ᴄʟᴇᴀʀ ɴᴏᴛᴇ ᴡɪᴛʜ ᴛʜɪs ɴᴀᴍᴇ
+ ➯ /removeallnotes: ʀᴇᴍᴏᴠᴇs ᴀʟʟ ɴᴏᴛᴇs ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ
+ ➠ Nᴏᴛᴇ: Nᴏᴛᴇ ɴᴀᴍᴇs ᴀʀᴇ ᴄᴀsᴇ-ɪɴsᴇɴsɪᴛɪᴠᴇ, ᴀɴᴅ ᴛʜᴇʏ ᴀʀᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴄᴏɴᴠᴇʀᴛᴇᴅ ᴛᴏ ʟᴏᴠᴇʀᴄᴀsᴇ ʙᴇғᴏʀᴇ ɢᴇᴛᴛɪɴɢ sᴀᴠᴇᴅ.</blockquote>
 """
 
-__mod_name__ = "NOTES"
+__mod_name__ = "˹ ɴᴏᴛᴇs ˼"
 
 # <================================================ HANDLER =======================================================>
 function(CommandHandler("get", cmd_get))
