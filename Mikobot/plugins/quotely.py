@@ -276,19 +276,17 @@ async def quott_(event):
 # <=================================================== HELP ====================================================>
 
 
-__mod_name__ = "QUOTELY"
+__mod_name__ = "˹ ǫᴜᴏᴛᴇʟʏ ˼"
 
 __help__ = """   
-»  /q : Create quote.
+<blockquote>➯  /q : Cʀᴇᴀᴛᴇ ǫᴜᴏᴛᴇ.
 
-» /q r : Get replied quote.
+➯ /q r : Gᴇᴛ ʀᴇᴘʟɪᴇᴅ ǫᴜᴏᴛᴇ.
 
-» /q 2 ᴛᴏ 8 : Get multiple quotes.
+➯ /q 2 ᴛᴏ 8 : Gᴇᴛ ᴍᴜʟᴛɪᴘʟᴇ ǫᴜᴏᴛᴇs.
 
-» /q < any colour name > : Create any coloured quotes.
-
-➠ Example:
-
-» /q red , /q blue etc.
+➯ /q &lt; any colour name &gt; : Cʀᴇᴀᴛᴇ ᴀɴʏ ᴄᴏʟᴏᴜʀᴇᴅ ǫᴜᴏᴛᴇs.</blockquote>
+<b><u>➠ Exᴀᴍᴘʟᴇ :</u></b>
+<blockquote>➯ /q red , /q blue etc.</blockquote>
 """
 # <================================================ END =======================================================>
