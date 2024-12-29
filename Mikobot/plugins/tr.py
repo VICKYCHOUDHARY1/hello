@@ -330,15 +330,14 @@ async def totranslate(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 __help__ = """
-➠ `/tr` or `/tl` (language code) as reply to a long message
+<blockquote>➠ /tr or /tl (language code) ᴀs ʀᴇᴘʟʏ ᴛᴏ ᴀ ʟᴏɴɢ ᴍᴇssᴀɢᴇ</blockquote>
 
-➠ *Example:*
+<b><u>➠ Exᴀᴍᴘʟᴇ :</u></b>
+<blockquote>➯ /tr en : ᴛʀᴀɴsʟᴀᴛᴇs sᴏᴍᴇᴛʜɪɴɢs ᴛᴏ ᴇɴɢʟɪsʜ.
 
-» `/tr en`*:* translates something to english
+➯ /tr hi-en : ᴛʀᴀɴsʟᴀᴛᴇs ʜɪɴᴅɪ ᴛᴏ ᴇɴɢʟɪsʜ.
 
-» `/tr hi-en`*:* translates hindi to english
-
-» /echo < text >: echos the message.
+➯ /echo &lt; text &gt;: ᴇᴄʜᴏs ᴛʜᴇ ᴍᴇssᴀɢᴇ.</blockquote>
 """
 
 TRANSLATE_HANDLER = DisableAbleCommandHandler(["tr", "tl"], totranslate, block=False)
@@ -349,7 +348,7 @@ ECHO_HANDLER = DisableAbleCommandHandler(
 function(TRANSLATE_HANDLER)
 function(ECHO_HANDLER)
 
-__mod_name__ = "TRANSLATOR"
+__mod_name__ = "˹ ᴛʀᴀɴsʟᴀᴛᴏʀ ˼"
 __command_list__ = ["tr", "tl", "echo"]
 __handlers__ = [TRANSLATE_HANDLER]
 # <================================================ END =======================================================>
