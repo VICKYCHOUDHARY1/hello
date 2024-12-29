@@ -165,18 +165,16 @@ async def karma_toggle_xd(_, message):
 # <=================================================== HELP ====================================================>
 
 
-__mod_name__ = "KARMA"
+__mod_name__ = "˹ ᴋᴀʀᴍᴀ ˼"
 __help__ = """
+<blockquote>➠ UPVOTE - Usᴇ ᴜᴘᴠᴏᴛᴇ ᴋᴇʏᴡᴏʀᴅs ʟɪᴋᴇ &quot;+&quot;, &quot;+1&quot;, &quot;ᴛʜᴀɴᴋs&quot;, etc. ᴛᴏ ᴜᴘᴠᴏᴛᴇ ᴀ ᴍᴇssᴀɢᴇ.
+➠ DOWNVOTE - Usᴇ ᴅᴏᴡɴᴠᴏᴛᴇ ᴋᴇʏᴡᴏʀᴅs ʟɪᴋᴇ &quot;-&quot;, &quot;-1&quot;, etc. ᴛᴏ ғᴏᴡɴᴠᴏᴛᴇ ᴀ ᴍᴇssᴀɢᴇ.</blockquote>
 
-➠ *UPVOTE* - Use upvote keywords like "+", "+1", "thanks", etc. to upvote a message.
-➠ *DOWNVOTE* - Use downvote keywords like "-", "-1", etc. to downvote a message.
+<b><u>➠ Cᴏᴍᴍᴀɴᴅs :</u></b>
+<blockquote>➯ /karmastat:- Rᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴀᴛ ᴜsᴇʀ's ᴋᴀʀᴍᴀ ᴘᴏɪɴᴛs
 
-➠ *Commands*
+➯ /karmastat:- Sᴇɴᴅ ᴡɪᴛʜᴏᴜᴛ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴀɴʏ ᴍᴇssᴀɢᴇ ᴛᴏ ᴄʜᴇᴄᴋ ᴋᴀʀɴᴀ ᴘᴏɪɴᴛ ʟɪsᴛ ᴏғ ᴛᴏᴘ 10
 
-» /karmastat:- `Reply to a user to check that user's karma points`
-
-» /karmastat:- `Send without replying to any message to check karma point list of top 10`
-
-» /karma [OFF|ON] - `Enable or disable karma system in your chat.`
+➯ /karma [OFF|ON] - Eɴᴀʙʟᴇ ᴏʀ ᴅɪsᴀʙʟᴇ ᴋᴀʀᴍᴀ sʏsᴛᴇᴍ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.</blockquote>
 """
 # <================================================ END =======================================================>
