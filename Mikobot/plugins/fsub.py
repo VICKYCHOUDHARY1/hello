@@ -168,22 +168,22 @@ async def unmute_force_subscribe(event):
 
 
 __help__ = """
-➠ *Dazai has the capability to hush members who haven't yet subscribed to your channel until they decide to hit that subscribe button.*
-➠ *When activated, I'll silence those who are not subscribed and provide them with an option to unmute. Once they click the button, I'll lift the mute.*
+<blockquote>➠ Dᴀᴢᴀɪ ʜᴀs ᴛʜᴇ ᴄᴀᴘᴀʙɪʟɪᴛʏ ᴛᴏ ʜᴜsʜ ᴍᴇᴍʙᴇʀs ᴡʜᴏ ʜᴀᴠᴇɴ'ᴛ ʏᴇᴛ sᴜʙsᴄʀɪʙᴇᴅ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴜɴᴛɪʟʟ ᴛʜᴇʏ ᴅᴇᴄɪᴅᴇ ᴛᴏ ʜɪᴛ ᴛʜᴀᴛ sᴜʙsᴄʀɪʙᴇ ʙᴜᴛᴛᴏɴs.
+➠ Wʜᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ, I'ʟʟ sɪʟᴇɴᴄᴇ ᴛʜᴏsᴇ ᴡʜᴏ ᴀʀᴇ ɴᴏᴛ sᴜʙsᴄʀɪʙᴇᴅ ᴀɴᴅ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇᴍ ᴡɪᴛʜ ᴀɴ ᴏᴘᴛɪᴏɴ ᴛᴏ ᴜɴᴍᴜᴛᴇ. Oɴᴄᴇ ᴛʜᴇʏ ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ, I'ʟʟ ʟɪғᴛ ᴛʜᴇ ᴍᴜᴛᴇ.
 
-➠ Configuration Process
-➠ Exclusively for Creators
-➠ Grant me admin privileges in your group
-➠ Designate me as an admin in your channel
+➠ Cᴏɴғɪɢᴜʀᴀᴛɪᴏɴ Pʀᴏᴄᴇss
+➠ Exᴄʟᴜsɪᴠᴇʟʏ ғᴏʀ Cʀᴇᴀᴛᴏʀs
+➠ Gʀᴀɴᴛ ᴍᴇ ᴀᴅᴍɪɴ ᴘʀɪᴠɪʟᴇɢᴇs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ
+➠ Dᴇsɪɢɴᴀᴛᴇ ᴍᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ</blockquote>
 
-➠ *Commands*
-» /fsub channel\_username - to initiate and customize settings for the channel.
+<b><u>➠ Cᴏᴍᴍᴀɴᴅs :</u></b>
+<blockquote>➯ /fsub channel\<i>username - Tᴏ ɪɴɪᴛɪᴀᴛᴇ ᴀɴᴅ ᴄᴏsᴛᴏᴍɪᴢᴇ sᴇᴛᴛɪɴɢs ғᴏʀ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ.</blockquote>
 
-➠ *Kick things off with...*
-» /fsub - to review the current settings.
-» /fsub off - to deactivate the force subscription feature.
+<b><u>➠ Kɪᴄᴋ ᴛʜɪɴɢs ᴏғғ ᴡɪᴛʜ...</u></b>
+<blockquote>➯ /fsub - Tᴏ ʀᴇᴠɪᴇᴡ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ sᴇᴛᴛɪɴɢs.
+➯ /fsub off - Tᴏ ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴛʜᴇ ғᴏʀᴄᴇ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs.</blockquote>
 
-➠ *If you disable fsub, you'll need to set it up again for it to take effect. Utilize /fsub channel\_username.*
+<blockquote>➠ Iғ ʏᴏᴜ ᴅɪsᴀʙʟᴇ ғsᴜʙ, ʏᴏᴜ'ʟʟ ɴᴇᴇᴅ ᴛᴏ sᴇᴛ ɪᴛ ᴜᴘ ᴀɢɪɴ ғᴏʀ ɪᴛ ᴛᴏ ᴛᴀᴋᴇ ᴇғғᴇᴄᴛ. Utilize /fsub channel\</i>username.</blockquote>
 """
-__mod_name__ = "F-SUB"
+__mod_name__ = "˹ ғ-sᴜʙ ˼"
 # <================================================ END =======================================================>
