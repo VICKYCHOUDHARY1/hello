@@ -123,13 +123,12 @@ async def del_msg(c: app, m: Message):
 
 # <=================================================== HELP ====================================================>
 __help__ = """
-❗️*Purge*
+<b><u>➥ Cᴏᴍᴍᴀɴᴅ :</u></b>
+<blockquote>➯ /purge: Dᴇʟᴇᴛᴇs ᴍᴇssᴀɢᴇ ᴜᴘᴛᴏ ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ.
 
-» /purge: Deletes messages upto replied message.
+➯ /spurge: Dᴇʟᴇᴛᴇs ᴍᴇssᴀɢᴇ ᴜᴘᴛᴏ ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ ᴡɪᴛʜᴏᴜᴛ ᴀ sᴜᴄᴄᴇss ᴍᴇssᴀɢᴇ.
 
-» /spurge: Deletes messages upto replied message without a success message.
+➯ /del: Dᴇʟᴇᴛᴇs ᴀ sɪɴɢʟᴇ ᴍᴇssᴀɢᴇ, ᴜsᴇᴅ ᴀs ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ.</blockquote>"""
 
-» /del: Deletes a single message, used as a reply to message."""
-
-__mod_name__ = "PURGE"
+__mod_name__ = "˹ ᴘᴜʀɢᴇ ˼"
 # <================================================ END =======================================================>
