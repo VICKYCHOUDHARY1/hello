@@ -180,29 +180,30 @@ async def webify(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 __help__ = """
-» /cosplay: sends cosplay images.
+<b><u>➲ Cᴏᴍᴍᴀɴᴅ :</u></b>
+<blockquote>➯ /cosplay: sᴇɴᴅs ᴄᴏɴsᴘʟᴀʏ ɪᴍᴀɢᴇs.
 
-» /decide: randomly answers yes/no/maybe.
+➯ /decide: ʀᴀɴᴅᴏᴍʟʏ ᴀɴsᴡᴇs yes/no/maybe.
 
-» /truth: sends a random truth string.
+➯ /truth: sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴛʀᴜᴛʜ sᴛʀɪɴɢ.
 
-» /dare: sends a random dare string.
+➯ /dare: sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀʀᴇ sᴛʀɪɴɢ.
 
-» /toss: tosses a coin.
+➯ /toss: ᴛᴏssᴇs ᴀ ᴄᴏɪɴ.
 
-» /shrug: get shrug xd.
+➯ /shrug: ɢᴇᴛ sʜʀᴜɢ xᴅ.
 
-» /bluetext: check yourself :V.
+➯ /bluetext: ᴄʜᴇᴄᴋ ʏᴏᴜʀsᴇʟғ :V.
 
-» /roll: roll a dice.
+➯ /roll: ʀᴏʟʟ ᴀ ᴅɪᴄᴇ.
 
-» /rlg: join ears, nose, mouth and create an emo ;-;
+➯ /rlg: ᴊᴏɪɴ ᴇᴀʀs, ɴᴏsᴇ, ᴍᴏᴜᴛʜ ᴀɴᴅ ᴄʀᴇᴀᴛᴇ ᴀɴ ᴇᴍᴏ ;-;
 
-» /weebify <text>: returns a weebified text.
+➯ /weebify &lt;text&gt;: ʀᴇᴛᴜʀɴs ᴀ ᴡᴇᴇʙɪғɪᴇᴅ ᴛᴇxᴛ.
 
-» /flirt <text>: returns a flirt text.
+➯ /flirt &lt;text&gt;: ʀᴇᴛᴜʀɴs ᴀ ғʟɪʀᴛ ᴛᴇxᴛ.
 
-» /joke <text>: tells a random joke.
+➯ /joke &lt;text&gt;: ᴛᴇʟʟs ᴀ ʀᴀɴᴅᴏᴍ ᴊᴏᴋᴇ.</blockquote>
 """
 
 # <================================================ HANDLER =======================================================>
@@ -228,7 +229,7 @@ function(FLIRT_HANDLER)
 function(TRUTH_HANDLER)
 function(DARE_HANDLER)
 
-__mod_name__ = "FUN"
+__mod_name__ = "˹ ғᴜɴ ˼"
 __command_list__ = [
     "roll",
     "toss",
