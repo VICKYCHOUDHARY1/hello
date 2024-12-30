@@ -44,11 +44,9 @@ async def get_file_id_from_message(update: Update):
     # Check for photos
     if message.photo:
         print(f"Available photo sizes: {message.photo}")  # Log all available photo sizes
-        # Ensure we pick the largest available photo size
-        if len(message.photo) > 0:
-            # Select the largest available photo size (last element is the highest resolution)
-            file_id = message.photo[-1].file_id
-            print(f"Selected photo file_id: {file_id}")  # Log selected file_id
+        # Select the largest photo available (last item in the list)
+        file_id = message.photo[-1].file_id  # The last one is typically the largest resolution
+        print(f"Selected photo file_id: {file_id}")  # Log selected file_id
 
     # Check for animations
     if message.animation:
@@ -69,6 +67,7 @@ async def get_file_id_from_message(update: Update):
     if not file_id:
         print("No valid media found.")
     return file_id
+
 
 
 async def detect_nsfw(update: Update, context: ContextTypes.DEFAULT_TYPE):
