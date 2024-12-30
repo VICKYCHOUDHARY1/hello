@@ -10,9 +10,9 @@ from Mikobot.utils.errors import capture_err
 # <=======================================================================================================>
 app = Client(
     "group_help",
-    api_id=123456,  # Replace with your API ID
-    api_hash="your_api_hash",  # Replace with your API Hash
-    bot_token="your_bot_token"  # Replace with your bot token
+    api_id=16457832,  # Replace with your API ID
+    api_hash="3030874d0befdb5d05597deacc3e83ab",  # Replace with your API Hash
+    bot_token="8081146945:AAEAQUWmxSaHMZ4dQuNTvqHkk8obG9VJDtQ"  # Replace with your bot token
 )
 
 
