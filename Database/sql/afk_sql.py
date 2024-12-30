@@ -2,7 +2,18 @@ import threading
 from datetime import datetime
 from sqlalchemy import BigInteger, Boolean, Column, DateTime, UnicodeText
 from sqlalchemy.exc import SQLAlchemyError
-from Database.sql import BASE, SESSION
+from Database.sql import BASE, SESSION  # Import BASE and SESSION from Database.sql
+import logging
+
+# Setup logging
+logging.basicConfig(level=logging.ERROR, format="%(asctime)s - %(message)s")
+logger = logging.getLogger(__name__)
+
+# Thread lock for thread-safe operations
+INSERTION_LOCK = threading.RLock()
+
+# Dictionary to cache AFK user data
+AFK_USERS = {}
 
 
 class AFK(BASE):
@@ -23,14 +34,8 @@ class AFK(BASE):
         return f"AFK status for {self.user_id}"
 
 
-# Create the table if it doesn't exist
-AFK.__table__.create(checkfirst=True)
-
-# Thread lock for thread-safe operations
-INSERTION_LOCK = threading.RLock()
-
-# Dictionary to cache AFK user data
-AFK_USERS = {}
+# Ensure the table is created if it doesn't exist
+AFK.__table__.create(checkfirst=True, bind=SESSION.bind)
 
 
 def is_afk(user_id: int) -> bool:
@@ -43,7 +48,7 @@ def check_afk_status(user_id: int):
     try:
         return SESSION.query(AFK).get(user_id)
     except SQLAlchemyError as e:
-        print(f"Error checking AFK status for {user_id}: {e}")
+        logger.error(f"Error checking AFK status for {user_id}: {e}")
     finally:
         SESSION.close()
 
@@ -65,7 +70,7 @@ def set_afk(user_id: int, reason: str = ""):
             SESSION.commit()
         except SQLAlchemyError as e:
             SESSION.rollback()
-            print(f"Error setting AFK for {user_id}: {e}")
+            logger.error(f"Error setting AFK for {user_id}: {e}")
         finally:
             SESSION.close()
 
@@ -76,7 +81,7 @@ def rm_afk(user_id: int) -> bool:
         try:
             curr = SESSION.query(AFK).get(user_id)
             if curr:
-                if user_id in AFK_USERS:  # sanity check
+                if user_id in AFK_USERS:  # Sanity check
                     del AFK_USERS[user_id]
 
                 SESSION.delete(curr)
@@ -84,7 +89,7 @@ def rm_afk(user_id: int) -> bool:
                 return True
         except SQLAlchemyError as e:
             SESSION.rollback()
-            print(f"Error removing AFK for {user_id}: {e}")
+            logger.error(f"Error removing AFK for {user_id}: {e}")
         finally:
             SESSION.close()
         return False
@@ -108,7 +113,7 @@ def toggle_afk(user_id: int, reason: str = ""):
             SESSION.commit()
         except SQLAlchemyError as e:
             SESSION.rollback()
-            print(f"Error toggling AFK for {user_id}: {e}")
+            logger.error(f"Error toggling AFK for {user_id}: {e}")
         finally:
             SESSION.close()
 
@@ -124,10 +129,16 @@ def __load_afk_users():
             if user.is_afk
         }
     except SQLAlchemyError as e:
-        print(f"Error loading AFK users: {e}")
+        logger.error(f"Error loading AFK users: {e}")
     finally:
         SESSION.close()
 
 
+def refresh_afk_cache():
+    """Refresh the AFK cache."""
+    __load_afk_users()
+
+
 # Load AFK users on startup
 __load_afk_users()
+            
