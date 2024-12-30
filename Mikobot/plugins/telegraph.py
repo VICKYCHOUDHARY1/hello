@@ -70,8 +70,8 @@ async def catbox_upload(client, message):
             end = datetime.now()
             ms = (end - start).seconds
             await message.reply_text(
-                f"➼ **Uploaded to [Catbox]({response}) in {ms} seconds.**\n\n"
-                f"➼ **Copy Link:** `{response}`",
+                f"➥ **Uploaded to [Catbox]({response}) in {ms} seconds.**\n\n"
+                f"➥ **Copy Link:** `{response}`",
                 disable_web_page_preview=False,
             )
         else:
