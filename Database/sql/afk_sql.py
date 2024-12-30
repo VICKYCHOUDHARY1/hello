@@ -1,8 +1,7 @@
 import threading
 from datetime import datetime
-
 from sqlalchemy import BigInteger, Boolean, Column, DateTime, UnicodeText
-
+from sqlalchemy.exc import SQLAlchemyError
 from Database.sql import BASE, SESSION
 
 
@@ -10,9 +9,9 @@ class AFK(BASE):
     __tablename__ = "afk_user"
 
     user_id = Column(BigInteger, primary_key=True)
-    is_afk = Column(Boolean)
-    reason = Column(UnicodeText)
-    time = Column(DateTime)
+    is_afk = Column(Boolean, default=True)
+    reason = Column(UnicodeText, nullable=True)
+    time = Column(DateTime, default=datetime.now)
 
     def __init__(self, user_id: int, reason: str = "", is_afk: bool = True):
         self.user_id = user_id
@@ -21,69 +20,101 @@ class AFK(BASE):
         self.time = datetime.now()
 
     def __repr__(self):
-        return "afk_status for {}".format(self.user_id)
+        return f"AFK status for {self.user_id}"
 
 
+# Create the table if it doesn't exist
 AFK.__table__.create(checkfirst=True)
+
+# Thread lock for thread-safe operations
 INSERTION_LOCK = threading.RLock()
 
+# Dictionary to cache AFK user data
 AFK_USERS = {}
 
 
-def is_afk(user_id):
+def is_afk(user_id: int) -> bool:
+    """Check if a user is AFK."""
     return user_id in AFK_USERS
 
 
-def check_afk_status(user_id):
+def check_afk_status(user_id: int):
+    """Retrieve the AFK status of a user from the database."""
     try:
         return SESSION.query(AFK).get(user_id)
+    except SQLAlchemyError as e:
+        print(f"Error checking AFK status for {user_id}: {e}")
     finally:
         SESSION.close()
 
 
-def set_afk(user_id, reason=""):
+def set_afk(user_id: int, reason: str = ""):
+    """Set a user as AFK with an optional reason."""
     with INSERTION_LOCK:
-        curr = SESSION.query(AFK).get(user_id)
-        if not curr:
-            curr = AFK(user_id, reason, True)
-        else:
-            curr.is_afk = True
+        try:
+            curr = SESSION.query(AFK).get(user_id)
+            if not curr:
+                curr = AFK(user_id, reason, True)
+            else:
+                curr.is_afk = True
+                curr.reason = reason
 
-        AFK_USERS[user_id] = {"reason": reason, "time": curr.time}
+            AFK_USERS[user_id] = {"reason": reason, "time": curr.time}
 
-        SESSION.add(curr)
-        SESSION.commit()
-
-
-def rm_afk(user_id):
-    with INSERTION_LOCK:
-        curr = SESSION.query(AFK).get(user_id)
-        if curr:
-            if user_id in AFK_USERS:  # sanity check
-                del AFK_USERS[user_id]
-
-            SESSION.delete(curr)
+            SESSION.add(curr)
             SESSION.commit()
-            return True
+        except SQLAlchemyError as e:
+            SESSION.rollback()
+            print(f"Error setting AFK for {user_id}: {e}")
+        finally:
+            SESSION.close()
 
-        SESSION.close()
+
+def rm_afk(user_id: int) -> bool:
+    """Remove a user's AFK status."""
+    with INSERTION_LOCK:
+        try:
+            curr = SESSION.query(AFK).get(user_id)
+            if curr:
+                if user_id in AFK_USERS:  # sanity check
+                    del AFK_USERS[user_id]
+
+                SESSION.delete(curr)
+                SESSION.commit()
+                return True
+        except SQLAlchemyError as e:
+            SESSION.rollback()
+            print(f"Error removing AFK for {user_id}: {e}")
+        finally:
+            SESSION.close()
         return False
 
 
-def toggle_afk(user_id, reason=""):
+def toggle_afk(user_id: int, reason: str = ""):
+    """Toggle a user's AFK status."""
     with INSERTION_LOCK:
-        curr = SESSION.query(AFK).get(user_id)
-        if not curr:
-            curr = AFK(user_id, reason, True)
-        elif curr.is_afk:
-            curr.is_afk = False
-        elif not curr.is_afk:
-            curr.is_afk = True
-        SESSION.add(curr)
-        SESSION.commit()
+        try:
+            curr = SESSION.query(AFK).get(user_id)
+            if not curr:
+                curr = AFK(user_id, reason, True)
+            elif curr.is_afk:
+                curr.is_afk = False
+            else:
+                curr.is_afk = True
+                curr.reason = reason
+
+            AFK_USERS[user_id] = {"reason": reason, "time": curr.time}
+            SESSION.add(curr)
+            SESSION.commit()
+        except SQLAlchemyError as e:
+            SESSION.rollback()
+            print(f"Error toggling AFK for {user_id}: {e}")
+        finally:
+            SESSION.close()
 
 
 def __load_afk_users():
+    """Load all AFK users into the cache."""
     global AFK_USERS
     try:
         all_afk = SESSION.query(AFK).all()
@@ -92,8 +123,11 @@ def __load_afk_users():
             for user in all_afk
             if user.is_afk
         }
+    except SQLAlchemyError as e:
+        print(f"Error loading AFK users: {e}")
     finally:
         SESSION.close()
 
 
+# Load AFK users on startup
 __load_afk_users()
