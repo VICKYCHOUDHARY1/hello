@@ -5,6 +5,7 @@ from telegram.ext import CommandHandler, MessageHandler, filters, ContextTypes
 from Database.mongodb.toggle_mongo import is_nsfw_on, nsfw_off, nsfw_on
 from Mikobot import BOT_USERNAME, DRAGONS
 from Mikobot.state import arq
+from Mikobot import function
 from Mikobot.utils.can_restrict import can_restrict
 from Mikobot.utils.errors import capture_err
 
