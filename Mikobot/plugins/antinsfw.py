@@ -65,6 +65,7 @@ async def get_file_id_from_message(update: Update):
         file_id = message.video.thumb.file_id
         print(f"Found video: {file_id}")
 
+    # If no valid file_id found
     if not file_id:
         print("No valid media found.")
     return file_id
@@ -178,6 +179,7 @@ async def nsfw_scan_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         print(f"Error: {e}")  # Log the error for debugging
         await m.edit_text("Something went wrong while processing the media.")
+          
 
 
 async def nsfw_enable_disable(update: Update, context: ContextTypes.DEFAULT_TYPE):
