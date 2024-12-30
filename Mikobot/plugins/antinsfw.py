@@ -124,7 +124,7 @@ async def nsfw_scan_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     file_id = await get_file_id_from_message(update)
 
     if not file_id:
-        return await m.edit("Something wrong happened.")
+        return await m.edit_text("Something wrong happened.")  # Use edit_text instead of edit
 
     file = await context.bot.get_file(file_id)
     file_path = await file.download_to_drive()
@@ -137,10 +137,10 @@ async def nsfw_scan_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     remove(file_path)
 
     if not results.ok:
-        return await m.edit(results.result)
+        return await m.edit_text(results.result)  # Use edit_text instead of edit
 
     results = results.result
-    await m.edit(
+    await m.edit_text(  # Use edit_text instead of edit
         f"""
 **➢ Neutral:** `{results.neutral} %`
 **➢ Porn:** `{results.porn} %`
