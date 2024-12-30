@@ -33,14 +33,14 @@ class Config(object):
     MONGO_DB_URI = "mongodb+srv://Yash_607:Yash_607@cluster0.r3s9sbo.mongodb.net/?retryWrites=true&w=majority"
 
     # Support chat and support ID
-    SUPPORT_CHAT = "BABY09_WORLD"
-    SUPPORT_ID = -100
+    SUPPORT_CHAT = "+OL6jdTL7JAJjYzVl"
+    SUPPORT_ID = -1002202166325
 
     # Database name
     DB_NAME = "uttam_team"
 
     # Bot token
-    TOKEN = "7750394101:AAHGzu2QHZj3vQrdsYCgWYFMGzxYNMDgZ78"  # Get bot token from @BotFather on Telegram
+    TOKEN = ""  # Get bot token from @BotFather on Telegram
 
     # Owner's Telegram user ID (Must be an integer)
     OWNER_ID = 7400383704
