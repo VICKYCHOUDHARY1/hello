@@ -1,8 +1,6 @@
 # <============================================== IMPORTS =========================================================>
 from os import remove
-
 from pyrogram import filters
-
 from Database.mongodb.toggle_mongo import is_nsfw_on, nsfw_off, nsfw_on
 from Mikobot import BOT_USERNAME, DRAGONS, app
 from Mikobot.state import arq
@@ -151,39 +149,42 @@ async def nsfw_enable_disable(_, message):
     if len(message.command) != 2:
         await message.reply_text("Usage: /antinsfw [on/off]")
         return
-    status = message.text.split(None, 1)[1].strip()
-    status = status.lower()
+
+    status = message.text.split(None, 1)[1].strip().lower()
     chat_id = message.chat.id
+
     if status in ("on", "yes"):
         if await is_nsfw_on(chat_id):
-            await message.reply_text("Antinsfw is already enabled.")
+            await message.reply_text("Anti-NSFW is already enabled.")
             return
         await nsfw_on(chat_id)
         await message.reply_text(
-            "Enabled AntiNSFW System. I will Delete Messages Containing Inappropriate Content."
+            "Enabled AntiNSFW System. I will delete messages containing inappropriate content."
         )
     elif status in ("off", "no"):
         if not await is_nsfw_on(chat_id):
-            await message.reply_text("Antinsfw is already disabled.")
+            await message.reply_text("Anti-NSFW is already disabled.")
             return
         await nsfw_off(chat_id)
-        await message.reply_text("Disabled AntiNSFW System.")
+        await message.reply_text("Disabled Anti-NSFW system.")
     else:
-        await message.reply_text("Unknown Suffix, Use /antinsfw [on/off]")
+        await message.reply_text("Unknown suffix. Use /antinsfw [on/off].")
+
+    print(f"NSFW system status for chat {chat_id} is now {status}")
 
 
 # <=================================================== HELP ====================================================>
 
 
-__mod_name__ = "˹ ᴀɴᴛɪ-ɴsғᴡ ˼"
+__mod_name__ = "˹ ᴀɴᴛɪ-ɴsғᴡ ˼"
 
 __help__ = """
-<blockquote>🔞 Hᴇʟᴘs ɪɴ ᴅᴇᴛᴇᴄᴛɪɴɢ NSFW ᴍᴀᴛᴇʀɪᴀʟ ᴀɴᴅ ʀᴇᴍᴏᴠɪɴɢ ɪᴛ.</blockquote>
+<blockquote>🔞 Helps in detecting NSFW material and removing it.</blockquote>
 
-<b><u>➠ Cᴏᴍᴍᴀɴᴅ:</u></b>
+<b><u>➠ Command:</u></b>
 
-<blockquote>➯ /antinsfw [on/off]: Eɴᴀʙʟᴇs ᴀɴᴛɪ-ɴsғᴡ sʏsᴛᴇᴍ.
+<blockquote>➯ /antinsfw [on/off]: Enables Anti-NSFW system.
 
-➯ /nsfwscan &lt;ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ&gt;: Sᴄᴀɴs ᴛʜᴇ ғɪʟᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.</blockquote>
+➯ /nsfwscan <reply to message>: Scans the file replied to.</blockquote>
 """
 # <================================================ END =======================================================>
