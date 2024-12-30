@@ -44,8 +44,9 @@ async def get_file_id_from_message(update: Update):
     # Check for photos
     if message.photo:
         print(f"Available photo sizes: {message.photo}")  # Log all available photo sizes
+        # Ensure we pick the largest available photo size
         if len(message.photo) > 0:
-            # Select the largest available photo size
+            # Select the largest available photo size (last element is the highest resolution)
             file_id = message.photo[-1].file_id
             print(f"Selected photo file_id: {file_id}")  # Log selected file_id
 
@@ -65,7 +66,6 @@ async def get_file_id_from_message(update: Update):
         file_id = message.video.thumb.file_id
         print(f"Found video: {file_id}")
 
-    # If no valid file_id found
     if not file_id:
         print("No valid media found.")
     return file_id
@@ -179,6 +179,7 @@ async def nsfw_scan_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         print(f"Error: {e}")  # Log the error for debugging
         await m.edit_text("Something went wrong while processing the media.")
+
           
 
 
