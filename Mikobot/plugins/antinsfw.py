@@ -180,8 +180,6 @@ async def nsfw_enable_disable(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 # <================================================ HANDLERS =======================================================>
 
-handlers = [
-    CommandHandler("nsfwscan", nsfw_scan_command),
-    CommandHandler("antinsfw", nsfw_enable_disable),
-    MessageHandler(filters.PHOTO | filters.DOCUMENT.PHOTO | filters.STICKER | filters.VIDEO, detect_nsfw),
-]
+function(CommandHandler("nsfwscan", nsfw_scan_command, block=False))
+function(CommandHandler("antinsfw", nsfw_enable_disable, block=False))
+function(MessageHandler(filters.PHOTO | filters.DOCUMENT.PHOTO | filters.STICKER | filters.VIDEO, detect_nsfw, block=False))
