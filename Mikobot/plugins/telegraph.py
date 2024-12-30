@@ -1,72 +1,97 @@
 # <============================================== IMPORTS =========================================================>
 import os
+import requests
 from datetime import datetime
-
 from PIL import Image
 from pyrogram import filters
-from telegraph import Telegraph, exceptions, upload_file
-
 from Mikobot import app
 from Mikobot.utils.errors import capture_err
 
 # <=======================================================================================================>
 
 TMP_DOWNLOAD_DIRECTORY = "tg-File/"
-bname = "YaeMiko_Roxbot"  # ᴅᴏɴ'ᴛ ᴇᴅɪᴛ ᴛʜɪᴀ ʟɪɴᴇ
-telegraph = Telegraph()
-r = telegraph.create_account(short_name=bname)
-auth_url = r["auth_url"]
+os.makedirs(TMP_DOWNLOAD_DIRECTORY, exist_ok=True)  # Ensure the directory exists
 
+# <============================================== CATBOX FUNCTION ==================================================>
+def upload_to_catbox(file_path):
+    """Upload the file to Catbox."""
+    url = "https://catbox.moe/user/api.php"
+    data = {"reqtype": "fileupload", "json": "true"}
+    
+    try:
+        with open(file_path, "rb") as file:
+            files = {"fileToUpload": file}
+            response = requests.post(url, data=data, files=files)
+        
+        if response.status_code == 200:
+            try:
+                response_json = response.json()
+                return True, response_json.get("url", "")
+            except ValueError:
+                return True, response.text.strip()
+        else:
+            return False, f"Error: {response.status_code} - {response.text}"
+    except Exception as e:
+        return False, f"Exception occurred: {str(e)}"
 
-# <================================================ FUNCTION =======================================================>
+# <============================================ BOT COMMAND HANDLER ================================================>
 @app.on_message(filters.command(["tgm", "tmg", "telegraph"], prefixes="/"))
 @capture_err
-async def telegraph_upload(client, message):
+async def catbox_upload(client, message):
+    """Handle /tgm, /tmg, /telegraph commands to upload media to Catbox."""
     if message.reply_to_message:
         start = datetime.now()
         r_message = message.reply_to_message
-        input_str = message.command[0]
-        if input_str in ["tgm", "tmg", "telegraph"]:
+
+        # Download the replied media
+        try:
             downloaded_file_name = await client.download_media(
                 r_message, file_name=TMP_DOWNLOAD_DIRECTORY
             )
+        except Exception as e:
+            await message.reply_text(f"Failed to download media: {str(e)}")
+            return
+
+        # Handle image resizing for .webp files
+        if downloaded_file_name.endswith(".webp"):
+            resize_image(downloaded_file_name)
+
+        # Upload to Catbox
+        try:
+            success, response = upload_to_catbox(downloaded_file_name)
+        except Exception as e:
+            await message.reply_text(f"Error during upload: {str(e)}")
+            os.remove(downloaded_file_name)  # Clean up
+            return
+
+        os.remove(downloaded_file_name)  # Clean up
+
+        if success:
             end = datetime.now()
             ms = (end - start).seconds
-            h = await message.reply_text(f"Downloaded to file in {ms} seconds.")
-            if downloaded_file_name.endswith(".webp"):
-                resize_image(downloaded_file_name)
-            try:
-                start = datetime.now()
-                media_urls = upload_file(downloaded_file_name)
-            except exceptions.TelegraphException as exc:
-                await h.edit_text("Error: " + str(exc))
-                os.remove(downloaded_file_name)
-            else:
-                end = datetime.now()
-                ms_two = (end - start).seconds
-                os.remove(downloaded_file_name)
-                await h.edit_text(
-                    f"""
-➼ **Uploaded to [Telegraph](https://telegra.ph{media_urls[0]}) in {ms + ms_two} seconds.**\n 
-➼ **Copy Link :** `https://telegra.ph{media_urls[0]}`""",
-                    disable_web_page_preview=False,
-                )
+            await message.reply_text(
+                f"➼ **Uploaded to [Catbox]({response}) in {ms} seconds.**\n\n"
+                f"➼ **Copy Link:** `{response}`",
+                disable_web_page_preview=False,
+            )
+        else:
+            await message.reply_text(f"Upload failed: {response}")
     else:
         await message.reply_text(
-            "Reply to a message to get a permanent telegra.ph link."
+            "Reply to a message to get a permanent Catbox link."
         )
 
-
+# <============================================== IMAGE RESIZING ===================================================>
 def resize_image(image):
+    """Resize and convert the image to PNG."""
     im = Image.open(image)
     im.save(image, "PNG")
-
 
 # <=================================================== HELP ====================================================>
 __help__ = """ 
 <b><u>➠ Tᴇʟᴇɢʀᴀᴘʜ :</u></b>
 <blockquote>➯ /tgm, /tmg, /telegraph: Gᴇᴛ ᴛᴇʟᴇɢʀᴀᴍ ʟɪɴᴋ ᴏғ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ.</blockquote>
- """
+"""
 
 __mod_name__ = "˹ ᴛᴇʟᴇɢʀᴀᴘʜ ˼"
 # <================================================ END =======================================================>
