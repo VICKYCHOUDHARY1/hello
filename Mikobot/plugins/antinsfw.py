@@ -70,7 +70,6 @@ async def get_file_id_from_message(update: Update):
     return file_id
 
 
-
 async def detect_nsfw(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """NSFW सामग्री को स्कैन और हटाने का कार्य"""
     message = update.message
@@ -179,7 +178,6 @@ async def nsfw_scan_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         print(f"Error: {e}")  # Log the error for debugging
         await m.edit_text("Something went wrong while processing the media.")
-
 
 
 async def nsfw_enable_disable(update: Update, context: ContextTypes.DEFAULT_TYPE):
