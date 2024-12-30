@@ -312,7 +312,7 @@ async def ai_handler_callback(update: Update, context: ContextTypes.DEFAULT_TYPE
             "<blockquote><b><u>Aʟʟ Cᴏᴍᴍᴀɴᴅ ᴜsᴇ /:</u></b></blockquote>\n"
             "<blockquote>➥ /askgpt &lt;wʀɪᴛᴇ ǫᴜᴇʀʏ&gt;: ᴀ ᴄʜᴀᴛɢᴘᴛ ʀᴇsᴘᴏɴᴅɪɴɢ ᴛᴏ ᴜsᴇʀ ǫᴜᴇʀɪᴇs.\n\n"
             "➥ /palm &lt;wʀɪᴛᴇ ᴘʀᴏᴍᴛ&gt;: Pᴇʀғᴏʀᴍs ᴀ ᴘᴀʟᴍ sᴇᴀʀᴄʜ ᴜsɪɴɢ ᴀ ᴄʜᴀᴛɢᴘᴛ.\n\n"
-            "➥ /upscale &lt;ʀᴇᴘʟʏ ᴛᴏ ɪᴍᴀɢᴇ&gt;: Uᴘsᴄᴀʟᴇs ʏᴏᴜʀ ɪᴍᴀɢᴇ ǫᴜɪʟɪᴛʏ.</blockquote>",
+            "➥ /enhance &lt;ʀᴇᴘʟʏ ᴛᴏ ɪᴍᴀɢᴇ&gt;: Eɴʜᴀɴᴄᴇ ʏᴏᴜʀ ɪᴍᴀɢᴇ ǫᴜɪʟɪᴛʏ.</blockquote>",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
