@@ -35,7 +35,7 @@ DEFAULT_WELCOME = "ʜᴇʏ {first}, ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ?"
 DEFAULT_GOODBYE = "ɴɪᴄᴇ ᴋɴᴏᴡɪɴɢ ʏᴀ!"
 
 DEFAULT_WELCOME_MESSAGES = [
-    "{first} ɪs ʜᴇʀᴇ!",  # Discord welcome messages copied
+    "ʜᴇʏ {first}, ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ?",  # Discord welcome messages copied
     "ʀᴇᴀᴅʏ ᴘʟᴀʏᴇʀ {first}",
     "ᴡᴇʟᴄᴏᴍᴇ ʙʀᴏ {first}",
 ]
