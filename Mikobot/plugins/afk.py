@@ -62,34 +62,40 @@ async def no_longer_afk(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not user:  # ignore channels
         return
 
+    # Check if user is AFK
     if sql.is_afk(user.id):
         afk_user = sql.check_afk_status(user.id)
 
-        time = humanize.naturaldelta(datetime.now() - afk_user.time)
+        # Ensure afk_user is not None and has valid data
+        if afk_user and afk_user.time:
+            time = humanize.naturaldelta(datetime.now() - afk_user.time)
+        else:
+            time = "an unknown amount of time"
 
-    res = sql.rm_afk(user.id)
-    if res:
-        if message.new_chat_members:  # dont say msg
-            return
-        firstname = update.effective_user.first_name
-        try:
-            options = [
-                "➲ {} is here!",
-                "➲ {} is back!",
-                "➲ {} is now in the chat!",
-                "➲ {} is awake!",
-                "➲ {} is back online!",
-                "➲ {} is finally here!",
-                "➲ Welcome back! {}",
-            ]
-            chosen_option = random.choice(options)
-            await update.effective_message.reply_text(
-                chosen_option.format(firstname)
-                + f"\n\nYou were AFK for: <code>{time}</code>",
-                parse_mode="html",
-            )
-        except:
-            return
+        res = sql.rm_afk(user.id)
+        if res:
+            if message.new_chat_members:  # don't say message
+                return
+            firstname = update.effective_user.first_name
+            try:
+                options = [
+                    "➲ {} is here!",
+                    "➲ {} is back!",
+                    "➲ {} is now in the chat!",
+                    "➲ {} is awake!",
+                    "➲ {} is back online!",
+                    "➲ {} is finally here!",
+                    "➲ Welcome back! {}",
+                ]
+                chosen_option = random.choice(options)
+                await update.effective_message.reply_text(
+                    chosen_option.format(firstname)
+                    + f"\n\nYou were AFK for: <code>{time}</code>",
+                    parse_mode="html",
+                )
+            except:
+                return
+
 
 
 async def reply_afk(update: Update, context: ContextTypes.DEFAULT_TYPE):
