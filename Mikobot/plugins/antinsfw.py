@@ -14,10 +14,10 @@ async def get_file_id_from_message(update: Update):
     message = update.message
     file_id = None
 
-    # Log message types for debugging
+    # Log message details for debugging
     print(f"Received message: {message}")
 
-    # Checking for documents (files)
+    # Check for documents
     if message.document:
         if int(message.document.file_size) > 3145728:
             print("Document size is too large.")
@@ -29,7 +29,7 @@ async def get_file_id_from_message(update: Update):
         file_id = message.document.file_id
         print(f"Found document: {file_id}")
 
-    # Checking for stickers
+    # Check for stickers
     if message.sticker:
         if message.sticker.is_animated:
             if not message.sticker.thumb:
@@ -41,14 +41,15 @@ async def get_file_id_from_message(update: Update):
             file_id = message.sticker.file_id
             print(f"Found sticker: {file_id}")
 
-    # Checking for photos
+    # Check for photos
     if message.photo:
-        print(f"Available photo sizes: {message.photo}")  # Log photo sizes
-        # Selecting the largest resolution photo available
+        # Log available photo sizes
+        print(f"Available photo sizes: {message.photo}")
+        # Select the largest available photo size
         file_id = message.photo[-1].file_id
-        print(f"Selected file_id: {file_id}")  # Log the selected file_id
+        print(f"Selected file_id: {file_id}")  # Log selected file_id
 
-    # Checking for animations
+    # Check for animations
     if message.animation:
         if not message.animation.thumb:
             print("Animation has no thumb.")
@@ -56,7 +57,7 @@ async def get_file_id_from_message(update: Update):
         file_id = message.animation.thumb.file_id
         print(f"Found animation: {file_id}")
 
-    # Checking for videos
+    # Check for videos
     if message.video:
         if not message.video.thumb:
             print("Video has no thumb.")
@@ -67,7 +68,6 @@ async def get_file_id_from_message(update: Update):
     if not file_id:
         print("No valid media found.")
     return file_id
-
 
 
 async def detect_nsfw(update: Update, context: ContextTypes.DEFAULT_TYPE):
