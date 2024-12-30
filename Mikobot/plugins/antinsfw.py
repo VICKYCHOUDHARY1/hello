@@ -1,4 +1,3 @@
-# <============================================== IMPORTS =========================================================>
 from os import remove
 from telegram import Update
 from telegram.ext import CommandHandler, MessageHandler, filters, ContextTypes
@@ -50,16 +49,19 @@ async def detect_nsfw(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """NSFW सामग्री को स्कैन और हटाने का कार्य"""
     message = update.message
 
+    # Check if Anti-NSFW is enabled
     if not await is_nsfw_on(message.chat.id):
         return
 
     if not message.from_user:
         return
 
+    # Get file ID from the message
     file_id = await get_file_id_from_message(update)
     if not file_id:
         return
 
+    # Download the media file
     file = await context.bot.get_file(file_id)
     file_path = await file.download_to_drive()
 
@@ -183,6 +185,8 @@ async def nsfw_enable_disable(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 function(CommandHandler("nsfwscan", nsfw_scan_command, block=False))
 function(CommandHandler("antinsfw", nsfw_enable_disable, block=False))
+
+# Handle all media messages (photos, documents, stickers, videos)
 function(
     MessageHandler(
         filters.PHOTO | filters.Document.ALL | filters.Sticker.ALL | filters.VIDEO,
