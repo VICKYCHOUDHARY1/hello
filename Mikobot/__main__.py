@@ -501,29 +501,40 @@ async def error_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     error = context.error
     try:
         raise error
-    except Forbidden:
-        print("no nono1")
-        print(error)
-        # remove update.message.chat_id from conversation list
-    except BadRequest:
-        print("no nono2")
-        print("BadRequest caught")
-        print(error)
+    except Forbidden as e:
+        print("Forbidden Error: You do not have permission to perform this action.")
+        print(e)
+        # Optionally log or take action if necessary.
+        # Example: Remove the user or chat_id from active operations if needed.
 
-        # handle malformed requests - read more below!
-    except TimedOut:
-        print("no nono3")
-        # handle slow connection problems
-    except NetworkError:
-        print("no nono4")
-        # handle other connection problems
-    except ChatMigrated as err:
-        print("no nono5")
-        print(err)
-        # the chat_id of a group has changed, use e.new_chat_id instead
-    except TelegramError:
-        print(error)
-        # handle all other telegram related errors
+    except BadRequest as e:
+        print("BadRequest Error: Malformed request or invalid parameters.")
+        print(e)
+        # Handle malformed requests or invalid API usage.
+
+    except TimedOut as e:
+        print("Timeout Error: Telegram server took too long to respond.")
+        print(e)
+        # Handle slow connection problems or retry.
+
+    except NetworkError as e:
+        print("NetworkError: Issues with the connection.")
+        print(e)
+        # Handle other network-related connection issues.
+
+    except ChatMigrated as e:
+        print(f"ChatMigrated Error: The chat ID has been migrated to {e.new_chat_id}.")
+        # Handle chat migrations and update your records.
+
+    except TelegramError as e:
+        print("TelegramError: An unspecified error occurred.")
+        print(e)
+        # Handle all other generic Telegram errors.
+
+    except Exception as e:
+        print("Unhandled Exception:", e)
+        # Log unexpected errors to prevent crashes.
+
 
 
 async def help_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
