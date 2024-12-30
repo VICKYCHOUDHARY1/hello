@@ -23,25 +23,25 @@ SOFTWARE.
 """
 
 import threading
-
 from sqlalchemy import BigInteger, Column, String
-
+from sqlalchemy.exc import SQLAlchemyError
 from Database.sql import BASE, SESSION
 
 
 class Approvals(BASE):
     __tablename__ = "approval"
     chat_id = Column(String(14), primary_key=True)
-    user_id = Column(BigInteger, primary_key=True)
+    user_id = Column(BigInteger, primary_key=True)  # Use BigInteger for large IDs
 
     def __init__(self, chat_id, user_id):
-        self.chat_id = str(chat_id)  # ensure string
+        self.chat_id = str(chat_id)  # Ensure string
         self.user_id = user_id
 
     def __repr__(self):
-        return "<ᴀᴘᴘʀᴏᴠᴇ %s>" % self.user_id
+        return "<Approval %s>" % self.user_id
 
 
+# Ensure table is created
 Approvals.__table__.create(checkfirst=True)
 
 APPROVE_INSERTION_LOCK = threading.RLock()
@@ -49,28 +49,42 @@ APPROVE_INSERTION_LOCK = threading.RLock()
 
 def approve(chat_id, user_id):
     with APPROVE_INSERTION_LOCK:
-        approve_user = Approvals(str(chat_id), user_id)
-        SESSION.add(approve_user)
-        SESSION.commit()
+        try:
+            approve_user = Approvals(str(chat_id), user_id)
+            SESSION.add(approve_user)
+            SESSION.commit()
+        except SQLAlchemyError as e:
+            SESSION.rollback()  # Rollback on error
+            print(f"Error approving user: {e}")
+        finally:
+            SESSION.close()  # Ensure session is closed
 
 
 def is_approved(chat_id, user_id):
     try:
         return SESSION.query(Approvals).get((str(chat_id), user_id))
+    except SQLAlchemyError as e:
+        print(f"Error checking approval: {e}")
+        return None
     finally:
-        SESSION.close()
+        SESSION.close()  # Ensure session is closed
 
 
 def disapprove(chat_id, user_id):
     with APPROVE_INSERTION_LOCK:
-        disapprove_user = SESSION.query(Approvals).get((str(chat_id), user_id))
-        if disapprove_user:
-            SESSION.delete(disapprove_user)
-            SESSION.commit()
-            return True
-        else:
-            SESSION.close()
+        try:
+            disapprove_user = SESSION.query(Approvals).get((str(chat_id), user_id))
+            if disapprove_user:
+                SESSION.delete(disapprove_user)
+                SESSION.commit()
+                return True
             return False
+        except SQLAlchemyError as e:
+            SESSION.rollback()  # Rollback on error
+            print(f"Error disapproving user: {e}")
+            return False
+        finally:
+            SESSION.close()  # Ensure session is closed
 
 
 def list_approved(chat_id):
@@ -81,5 +95,8 @@ def list_approved(chat_id):
             .order_by(Approvals.user_id.asc())
             .all()
         )
+    except SQLAlchemyError as e:
+        print(f"Error listing approved users: {e}")
+        return []
     finally:
-        SESSION.close()
+        SESSION.close()  # Ensure session is closed
