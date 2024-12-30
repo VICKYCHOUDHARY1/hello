@@ -14,35 +14,53 @@ async def get_file_id_from_message(update: Update):
     message = update.message
     file_id = None
 
+    # Log message types for debugging
+    print(f"Received message: {message}")
+
     if message.document:
         if int(message.document.file_size) > 3145728:
-            return
+            print("Document size is too large.")
+            return None
         mime_type = message.document.mime_type
-        if mime_type not in ("image/png", "image/jpeg"):
-            return
+        if mime_type not in ("image/png", "image/jpeg", "application/pdf"):
+            print(f"Unsupported mime type: {mime_type}")
+            return None
         file_id = message.document.file_id
+        print(f"Found document: {file_id}")
 
     if message.sticker:
         if message.sticker.is_animated:
             if not message.sticker.thumb:
-                return
+                print("Animated sticker has no thumb.")
+                return None
             file_id = message.sticker.thumb.file_id
+            print(f"Found animated sticker: {file_id}")
         else:
             file_id = message.sticker.file_id
+            print(f"Found sticker: {file_id}")
 
     if message.photo:
-        file_id = message.photo[-1].file_id
+        file_id = message.photo[-1].file_id  # Getting the highest resolution photo
+        print(f"Found photo: {file_id}")
 
     if message.animation:
         if not message.animation.thumb:
-            return
+            print("Animation has no thumb.")
+            return None
         file_id = message.animation.thumb.file_id
+        print(f"Found animation: {file_id}")
 
     if message.video:
         if not message.video.thumb:
-            return
+            print("Video has no thumb.")
+            return None
         file_id = message.video.thumb.file_id
+        print(f"Found video: {file_id}")
+
+    if not file_id:
+        print("No valid media found.")
     return file_id
+
 
 
 async def detect_nsfw(update: Update, context: ContextTypes.DEFAULT_TYPE):
