@@ -1,17 +1,11 @@
-# CREATED BY: https://t.me/O_oKarma
-# API CREDITS: @Qewertyy
-# PROVIDED BY: https://github.com/Team-ProjectCodeX
-
 # <============================================== IMPORTS =========================================================>
 import base64
-
+import aiohttp
 from telegram import Update
 from telegram.constants import ParseMode
 from telegram.ext import CommandHandler, ContextTypes
-
 from Mikobot import LOGGER as logger
 from Mikobot import function
-from Mikobot.state import state
 
 # <=======================================================================================================>
 
@@ -22,18 +16,18 @@ GPT_MODEL_ID = 5
 
 # <================================================ FUNCTIONS =====================================================>
 
-
 async def get_api_response(model_id, api_params, api_url):
     try:
-        response = await state.post(api_url, params=api_params)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get(
-                "content", f"Error: Empty response received from the {model_id} API."
-            )
-        else:
-            return f"Error: Request failed with status code {response.status_code}."
-    except state.RequestError as e:
+        async with aiohttp.ClientSession() as session:
+            async with session.post(api_url, json=api_params) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    return data.get(
+                        "content", f"Error: Empty response received from the {model_id} API."
+                    )
+                else:
+                    return f"Error: Request failed with status code {response.status}."
+    except aiohttp.ClientError as e:
         return f"Error: An error occurred while calling the {model_id} API. {e}"
 
 
@@ -49,7 +43,7 @@ async def palm_chatbot(update: Update, context: ContextTypes.DEFAULT_TYPE):
     input_text = " ".join(args)
 
     result_msg = await context.bot.send_message(
-        chat_id=update.effective_chat.id, text="🌴"
+        chat_id=update.effective_chat.id, text="🌴 Processing..."
     )
 
     api_params = {"model_id": PALM_MODEL_ID, "prompt": input_text}
@@ -71,7 +65,7 @@ async def gpt_chatbot(update: Update, context: ContextTypes.DEFAULT_TYPE):
     input_text = " ".join(args)
 
     result_msg = await context.bot.send_message(
-        chat_id=update.effective_chat.id, text="💬"
+        chat_id=update.effective_chat.id, text="💬 Processing..."
     )
 
     api_params = {"model_id": GPT_MODEL_ID, "prompt": input_text}
@@ -81,48 +75,44 @@ async def gpt_chatbot(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=api_response)
 
 
-# Define the upscale_image function
 async def upscale_image(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
-        # Check if the replied message contains a photo
         if update.message.reply_to_message and update.message.reply_to_message.photo:
-            # Send a message indicating upscaling is in progress
             progress_msg = await update.message.reply_text(
                 "Upscaling your image, please wait..."
             )
 
-            # Access the image file_id from the replied message
             image = await update.message.reply_to_message.photo[-1].get_file()
-
-            # Download the image and save it
             image_path = await image.download_to_drive()
 
             with open(image_path, "rb") as image_file:
-                f = image_file.read()
+                image_data = image_file.read()
 
-            b = base64.b64encode(f).decode("utf-8")
+            b64_image = base64.b64encode(image_data).decode("utf-8")
 
-            response = await state.post(
-                "https://lexica.qewertyy.dev/upscale",
-                data={"image_data": b},
-            )
+            async with aiohttp.ClientSession() as session:
+                async with session.post(
+                    "https://lexica.qewertyy.dev/upscale",
+                    json={"image_data": b64_image},
+                ) as response:
+                    if response.status == 200:
+                        upscaled_image = await response.read()
+                        upscaled_file_path = "upscaled_image.png"
 
-            # Save the upscaled image
-            upscaled_file_path = "upscaled_image.png"
-            with open(upscaled_file_path, "wb") as output_file:
-                output_file.write(response.content)
+                        with open(upscaled_file_path, "wb") as output_file:
+                            output_file.write(upscaled_image)
 
-            # Delete the progress message
-            await context.bot.delete_message(
-                chat_id=update.message.chat_id, message_id=progress_msg.message_id
-            )
+                        await context.bot.delete_message(
+                            chat_id=update.message.chat_id, message_id=progress_msg.message_id
+                        )
 
-            # Send the upscaled image as a PNG file
-            await update.message.reply_document(
-                document=open(upscaled_file_path, "rb"),
-                caption=f"<b>Upscaled your image.</b>\n<b>Generated By:</b> @{context.bot.username}",
-                parse_mode=ParseMode.HTML,
-            )
+                        await update.message.reply_document(
+                            document=open(upscaled_file_path, "rb"),
+                            caption=f"<b>Upscaled your image.</b>\n<b>Generated By:</b> @{context.bot.username}",
+                            parse_mode=ParseMode.HTML,
+                        )
+                    else:
+                        raise Exception(f"Upscaling failed with status code {response.status}")
         else:
             await update.message.reply_text("Please reply to an image to upscale it.")
 
@@ -133,8 +123,7 @@ async def upscale_image(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 
-# <================================================ HANDLER =======================================================>
-# Register the upscale_image command handler
+# <================================================ HANDLERS =======================================================>
 function(CommandHandler("upscale", upscale_image, block=False))
 function(CommandHandler("palm", palm_chatbot, block=False))
 function(CommandHandler("askgpt", gpt_chatbot, block=False))
