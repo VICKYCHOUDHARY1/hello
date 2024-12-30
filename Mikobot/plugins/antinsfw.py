@@ -1,13 +1,19 @@
 # <============================================== IMPORTS =========================================================>
 from os import remove
-from pyrogram import filters
+from pyrogram import Client, filters
 from Database.mongodb.toggle_mongo import is_nsfw_on, nsfw_off, nsfw_on
-from Mikobot import BOT_USERNAME, DRAGONS, app
+from Mikobot import BOT_USERNAME, DRAGONS
 from Mikobot.state import arq
 from Mikobot.utils.can_restrict import can_restrict
 from Mikobot.utils.errors import capture_err
 
 # <=======================================================================================================>
+app = Client(
+    "group_help",
+    api_id=123456,  # Replace with your API ID
+    api_hash="your_api_hash",  # Replace with your API Hash
+    bot_token="your_bot_token"  # Replace with your bot token
+)
 
 
 # <================================================ FUNCTION =======================================================>
