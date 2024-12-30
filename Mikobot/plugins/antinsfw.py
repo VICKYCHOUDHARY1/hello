@@ -124,24 +124,24 @@ async def nsfw_scan_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     file_id = await get_file_id_from_message(update)
 
     if not file_id:
-        return await m.edit_text("Something wrong happened.")  # Use edit_text instead of edit
-
-    file = await context.bot.get_file(file_id)
-    file_path = await file.download_to_drive()
+        return await m.edit_text("Something wrong happened. No valid media found.")  # Clear message on failure
 
     try:
+        # Log file_id for debugging
+        print(f"File ID: {file_id}")
+
+        file = await context.bot.get_file(file_id)
+        file_path = await file.download_to_drive()
+
         results = await arq.nsfw_scan(file=file_path)
-    except Exception:
-        return
+        remove(file_path)
 
-    remove(file_path)
+        if not results.ok:
+            return await m.edit_text(f"Error: {results.result}")  # Return the exact error from the scan
 
-    if not results.ok:
-        return await m.edit_text(results.result)  # Use edit_text instead of edit
-
-    results = results.result
-    await m.edit_text(  # Use edit_text instead of edit
-        f"""
+        results = results.result
+        await m.edit_text(  # Use edit_text instead of edit
+            f"""
 **➢ Neutral:** `{results.neutral} %`
 **➢ Porn:** `{results.porn} %`
 **➢ Hentai:** `{results.hentai} %`
@@ -149,7 +149,11 @@ async def nsfw_scan_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 **➢ Drawings:** `{results.drawings} %`
 **➢ NSFW:** `{results.is_nsfw}`
 """
-    )
+        )
+    except Exception as e:
+        print(f"Error: {e}")  # Log the error for debugging
+        await m.edit_text("Something went wrong while processing the media.")
+
 
 
 async def nsfw_enable_disable(update: Update, context: ContextTypes.DEFAULT_TYPE):
