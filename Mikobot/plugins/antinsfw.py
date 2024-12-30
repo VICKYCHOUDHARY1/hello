@@ -185,7 +185,7 @@ function(CommandHandler("nsfwscan", nsfw_scan_command, block=False))
 function(CommandHandler("antinsfw", nsfw_enable_disable, block=False))
 function(
     MessageHandler(
-        filters.PHOTO | filters.Document.ALL | filters.Sticker.ALL | filters.Video.ALL,
+        filters.PHOTO | filters.DOCUMENT | filters.STICKER | filters.VIDEO,
         detect_nsfw,
         block=False
     )
