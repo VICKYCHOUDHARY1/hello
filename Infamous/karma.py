@@ -68,7 +68,7 @@ GROUP_START_BTN = [
 
 ALIVE_BTN = [
     [
-        ib(text="˹ ᴜᴘᴅᴀᴛᴇs ˼", url="https://t.me/BABY09_WO"),
+        ib(text="˹ ᴜᴘᴅᴀᴛᴇs ˼", url="https://t.me/II_JAAT_ON_FIRE_II"),
         ib(text="˹ sᴜᴘᴘᴏʀᴛ ˼", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
