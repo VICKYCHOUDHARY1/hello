@@ -19,31 +19,31 @@ class Config(object):
 
     # <================================================ REQUIRED ======================================================>
     # Telegram API configuration
-    API_ID = 16457832 # Get this value from my.telegram.org/apps
-    API_HASH = "3030874d0befdb5d05597deacc3e83ab"
+    API_ID = 26287302 # Get this value from my.telegram.org/apps
+    API_HASH = "9972788068236c4e88cd7368925cb1ca"
 
     # Database configuration (PostgreSQL)
     DATABASE_URL = "postgres://kfcdtwea:jxgqtvc1ji7lSMjAhUp0QbxrE8Ut0t7N@fanny.db.elephantsql.com/kfcdtwea"
 
     # Event logs chat ID and message dump chat ID
-    EVENT_LOGS = -100
-    MESSAGE_DUMP = -100
+    EVENT_LOGS = -1002487031881
+    MESSAGE_DUMP = -1002487031881
 
     # MongoDB configuration
     MONGO_DB_URI = "mongodb+srv://Yash_607:Yash_607@cluster0.r3s9sbo.mongodb.net/?retryWrites=true&w=majority"
 
     # Support chat and support ID
-    SUPPORT_CHAT = "+OL6jdTL7JAJjYzVl"
-    SUPPORT_ID = -1002202166325
+    SUPPORT_CHAT = "+-EsNv5Bh5Co2NTE1"
+    SUPPORT_ID = -1002487031881
 
     # Database name
-    DB_NAME = "uttam_team"
+    DB_NAME = "vicky"
 
     # Bot token
-    TOKEN = "8081146945:AAEAQUWmxSaHMZ4dQuNTvqHkk8obG9VJDtQ"  # Get bot token from @BotFather on Telegram
+    TOKEN = "7746243017:AAHpDys0DhFQ0J04FOvf_PVVvwWy6lk9xjI"  # Get bot token from @BotFather on Telegram
 
     # Owner's Telegram user ID (Must be an integer)
-    OWNER_ID = 7400383704
+    OWNER_ID = 7337834556
     # <=======================================================================================================>
 
     # <================================================ OPTIONAL ======================================================>
