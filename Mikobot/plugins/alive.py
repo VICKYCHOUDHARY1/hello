@@ -34,7 +34,7 @@ async def alive(_, message: Message):
     caption = f"""**Hᴇʏ, I Aᴍ** {BOT_NAME}
 
 ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-❒ **Cʀᴇᴀᴛᴇʀ:** [˹ ʙᴀʙʏ-ᴍᴜsɪᴄ ™˼𓅂](https://t.me/BABY09_WORLD)
+❒ **Cʀᴇᴀᴛᴇʀ:** [ ˹ νιкяαηт ˼ @II_JAAT_ON_FIRE_II ](https://t.me/II_JAAT_ON_FIRE_II)
 
 {library_versions_text}
 

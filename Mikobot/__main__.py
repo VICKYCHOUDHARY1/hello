@@ -427,7 +427,7 @@ async def anime_command_callback(update: Update, context: ContextTypes.DEFAULT_T
                     [
                         InlineKeyboardButton("Gᴏ ᴀɴᴅ ɢᴇɴ ᴍᴏʀᴇ", url="https://anilist.co/"),
                         InlineKeyboardButton(
-                            "˹ ʙᴀʙʏ-ᴍᴜsɪᴄ ™˼𓅂", url="https://t.me/BABY09_WORLD"
+                            " ˹ νιкяαηт ˼ @II_JAAT_ON_FIRE_II", url="https://t.me/II_JAAT_ON_FIRE_II"
                         ),
                     ],
                     [
@@ -447,7 +447,7 @@ async def genshin_command_callback(update: Update, context: ContextTypes.DEFAULT
         await query.answer()
         await query.message.edit_text(
             "<blockquote><b><u>Gᴇɴsʜɪɴ ɪᴍᴘᴀᴄᴛ</u></b>\n\n"
-            "˹ ʙᴀʙʏ-ᴍᴜsɪᴄ ™˼𓅂 <a href='https://files.catbox.moe/01z7uc.jpg'>ᴜɴᴅᴇʀ</a></blockquote>",
+            " ˹ νιкяαηт ˼ @II_JAAT_ON_FIRE_II <a href='https://files.catbox.moe/01z7uc.jpg'>ᴜɴᴅᴇʀ</a></blockquote>",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -627,7 +627,7 @@ async def gitsource_callback(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
     if query.data == "git_source":
         message_text = (
-            "<blockquote>Aᴄᴛᴜᴀʟʟʏ ᴍʏ ᴛᴇᴀᴍ ᴘʀᴏᴠɪᴅᴇ ᴘᴀɪᴅ sᴏᴜʀᴄᴇ</blockquote>\n<blockquote>Dᴍ ғᴏʀ sᴏᴜʀᴄᴇ:- @UTTAM470</blockquote>"
+            "<blockquote>Aᴄᴛᴜᴀʟʟʏ ᴍʏ ᴛᴇᴀᴍ ᴘʀᴏᴠɪᴅᴇ ᴘᴀɪᴅ sᴏᴜʀᴄᴇ</blockquote>\n<blockquote>Dᴍ ғᴏʀ sᴏᴜʀᴄᴇ:- @II_JAAT_ON_FIRE_II</blockquote>"
         )
 
         # Adding the inline button
@@ -643,7 +643,7 @@ async def gitsource_callback(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 
 async def repo(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    message_text = "<blockquote>Aᴄᴛᴜᴀʟʟʏ ᴍʏ ᴛᴇᴀᴍ ᴘʀᴏᴠɪᴅᴇ ᴘᴀɪᴅ sᴏᴜʀᴄᴇ</blockquote>\n<blockquote>Dᴍ ғᴏʀ sᴏᴜʀᴄᴇ:- @UTTAM470</blockquote>"
+    message_text = "<blockquote>Aᴄᴛᴜᴀʟʟʏ ᴍʏ ᴛᴇᴀᴍ ᴘʀᴏᴠɪᴅᴇ ᴘᴀɪᴅ sᴏᴜʀᴄᴇ</blockquote>\n<blockquote>Dᴍ ғᴏʀ sᴏᴜʀᴄᴇ:- @II_JAAT_ON_FIRE_II</blockquote>"
 
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
