@@ -33,7 +33,7 @@ class Config(object):
     MONGO_DB_URI = "mongodb+srv://Yash_607:Yash_607@cluster0.r3s9sbo.mongodb.net/?retryWrites=true&w=majority"
 
     # Support chat and support ID
-    SUPPORT_CHAT = "+-EsNv5Bh5Co2NTE1"
+    SUPPORT_CHAT = "II_JAAT_ON_FIRE_II"
     SUPPORT_ID = -1002487031881
 
     # Database name
