@@ -26,24 +26,24 @@ class Config(object):
     DATABASE_URL = "postgres://kfcdtwea:jxgqtvc1ji7lSMjAhUp0QbxrE8Ut0t7N@fanny.db.elephantsql.com/kfcdtwea"
 
     # Event logs chat ID and message dump chat ID
-    EVENT_LOGS = -1002487031881
-    MESSAGE_DUMP = -1002487031881
+    EVENT_LOGS = -4688261313
+    MESSAGE_DUMP = -4688261313
 
     # MongoDB configuration
     MONGO_DB_URI = "mongodb+srv://Yash_607:Yash_607@cluster0.r3s9sbo.mongodb.net/?retryWrites=true&w=majority"
 
     # Support chat and support ID
-    SUPPORT_CHAT = "II_JAAT_ON_FIRE_I"
-    SUPPORT_ID = -1002487031881
+    SUPPORT_CHAT = "+A8OTywrhkTg0NzY1"
+    SUPPORT_ID = -4627327639
 
     # Database name
     DB_NAME = "vicky"
 
     # Bot token
-    TOKEN = "7746243017:AAHpDys0DhFQ0J04FOvf_PVVvwWy6lk9xjI"  # Get bot token from @BotFather on Telegram
+    TOKEN = "7653049087:AAFwUdWgMufP6fyVBykRKMdBOovG2htNueM"  # Get bot token from @BotFather on Telegram
 
     # Owner's Telegram user ID (Must be an integer)
-    OWNER_ID = 7337834556
+    OWNER_ID = 7844391683
     # <=======================================================================================================>
 
     # <================================================ OPTIONAL ======================================================>
