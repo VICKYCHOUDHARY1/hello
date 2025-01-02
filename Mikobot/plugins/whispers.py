@@ -173,7 +173,7 @@ __help__ = """
 <blockquote>➠ Wʜɪsᴘᴇʀ ɪɴʟɪɴᴇ ғᴜɴᴄᴛɪᴏɴ ғᴏʀ sᴇᴄʀᴇᴛ ᴄʜᴀᴛs.</blockquote>
 
 <b><u>➠ Cᴏᴍᴍᴀɴᴅs :</u></b>
-<blockquote>➯ @GROUP<i>PROxECT</i>BOT your message @username
+<blockquote>➯ @group<i>manage</i>robot your message @username
 
 ➯ @GROUP<i>PROxECT</i>BOT @username your message</blockquote>
 """
