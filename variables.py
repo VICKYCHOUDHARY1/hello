@@ -26,15 +26,15 @@ class Config(object):
     DATABASE_URL = "postgres://kfcdtwea:jxgqtvc1ji7lSMjAhUp0QbxrE8Ut0t7N@fanny.db.elephantsql.com/kfcdtwea"
 
     # Event logs chat ID and message dump chat ID
-    EVENT_LOGS = -4688261313
-    MESSAGE_DUMP = -4688261313
+    EVENT_LOGS = -1002485869740
+    MESSAGE_DUMP = -1002485869740
 
     # MongoDB configuration
     MONGO_DB_URI = "mongodb+srv://Yash_607:Yash_607@cluster0.r3s9sbo.mongodb.net/?retryWrites=true&w=majority"
 
     # Support chat and support ID
-    SUPPORT_CHAT = "+A8OTywrhkTg0NzY1"
-    SUPPORT_ID = -4627327639
+    SUPPORT_CHAT = "real_Joint_Family"
+    SUPPORT_ID = -1002485869740
 
     # Database name
     DB_NAME = "vikrant"
