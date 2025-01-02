@@ -89,18 +89,37 @@ async def upscale_image(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 image_data = image_file.read()
 
             b64_image = base64.b64encode(image_data).decode("utf-8")
+            payload = {
+                "resize_mode": 0,
+                "show_extras_results": True,
+                "gfpgan_visibility": 0,
+                "codeformer_visibility": 0,
+                "codeformer_weight": 1,
+                "upscaling_resize": 2,
+                "upscaler_1": "4xUltrasharpV10",
+                "upscaler_2": "R-ESRGAN 4x+",
+                "upscale_first": False,
+                "image": b64_image,
+            }
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Basic cGljYXRvYXBpOko3XnMxazYqaTJA"
+            }
 
             async with aiohttp.ClientSession() as session:
                 async with session.post(
-                    "https://lexica.qewertyy.dev/upscale",
-                    json={"image_data": b64_image},
+                    "http://110.93.223.194:5670/sdapi/v1/extra-single-image",
+                    json=payload,
+                    headers=headers
                 ) as response:
                     if response.status == 200:
-                        upscaled_image = await response.read()
+                        response_data = await response.json()
+                        enhanced_image = response_data.get('image')
+                        enhanced_image_binary = base64.b64decode(enhanced_image)
                         upscaled_file_path = "upscaled_image.png"
 
                         with open(upscaled_file_path, "wb") as output_file:
-                            output_file.write(upscaled_image)
+                            output_file.write(enhanced_image_binary)
 
                         await context.bot.delete_message(
                             chat_id=update.message.chat_id, message_id=progress_msg.message_id
@@ -121,6 +140,7 @@ async def upscale_image(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             "Failed to upscale the image. Please try again later."
         )
+
 
 
 # <================================================ HANDLERS =======================================================>
