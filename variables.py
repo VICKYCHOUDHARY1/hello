@@ -37,7 +37,7 @@ class Config(object):
     SUPPORT_ID = -4627327639
 
     # Database name
-    DB_NAME = "vicky"
+    DB_NAME = "vikrant"
 
     # Bot token
     TOKEN = "7653049087:AAFwUdWgMufP6fyVBykRKMdBOovG2htNueM"  # Get bot token from @BotFather on Telegram
